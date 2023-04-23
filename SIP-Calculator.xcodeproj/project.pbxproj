@@ -1,0 +1,1034 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FD152AC284F60858A84F7B5 /* Pods_SIP_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705592C5D213D23D7BA7B6AD /* Pods_SIP_Calculator.framework */; };
+		76065C9F7BA9A8A5EBC63EF3 /* Pods_SIP_Calculator_SIP_CalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFD20C2F4AF3DA5B5EE8C98 /* Pods_SIP_Calculator_SIP_CalculatorUITests.framework */; };
+		9A18AB8929F2B4F000EF5D36 /* HttpWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A18AB8729F2B4F000EF5D36 /* HttpWrapper.swift */; };
+		9A18AB8A29F2B4F000EF5D36 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A18AB8829F2B4F000EF5D36 /* GlobalData.swift */; };
+		9A1AE1CA29F269B80041B50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1C929F269B80041B50D /* AppDelegate.swift */; };
+		9A1AE1CC29F269B80041B50D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1CB29F269B80041B50D /* SceneDelegate.swift */; };
+		9A1AE1CE29F269B80041B50D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1CD29F269B80041B50D /* ViewController.swift */; };
+		9A1AE1D329F269B80041B50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A1AE1D229F269B80041B50D /* Assets.xcassets */; };
+		9A1AE1E129F269B90041B50D /* SIP_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1E029F269B90041B50D /* SIP_CalculatorTests.swift */; };
+		9A1AE1EB29F269B90041B50D /* SIP_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1EA29F269B90041B50D /* SIP_CalculatorUITests.swift */; };
+		9A1AE1ED29F269B90041B50D /* SIP_CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1EC29F269B90041B50D /* SIP_CalculatorUITestsLaunchTests.swift */; };
+		9A570F7C29F26B0700019448 /* SIP_PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F7A29F26B0700019448 /* SIP_PlannerViewController.swift */; };
+		9A570F7D29F26B0700019448 /* SIP_PlannerDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F7B29F26B0700019448 /* SIP_PlannerDAL.swift */; };
+		9A570F8129F26B2800019448 /* Lumpsum_DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F7F29F26B2800019448 /* Lumpsum_DisplayViewController.swift */; };
+		9A570F8229F26B2800019448 /* Lumpsum_DisplayDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F8029F26B2800019448 /* Lumpsum_DisplayDAL.swift */; };
+		9A570F8629F26B5800019448 /* Details_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F8429F26B5800019448 /* Details_ViewController.swift */; };
+		9A570F8729F26B5800019448 /* Details_TableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F8529F26B5800019448 /* Details_TableTableViewCell.swift */; };
+		9A570F8D29F26BA000019448 /* SIP_DisplayDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F8B29F26BA000019448 /* SIP_DisplayDAL.swift */; };
+		9A570F8E29F26BA000019448 /* SIP_Display_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F8C29F26BA000019448 /* SIP_Display_ViewController.swift */; };
+		9A570F9329F26BB700019448 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F8F29F26BB700019448 /* History.swift */; };
+		9A570F9429F26BB700019448 /* History_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F9029F26BB700019448 /* History_TableViewCell.swift */; };
+		9A570F9529F26BB700019448 /* HistoryDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F9129F26BB700019448 /* HistoryDAL.swift */; };
+		9A570F9629F26BB700019448 /* History_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F9229F26BB700019448 /* History_ViewController.swift */; };
+		9A570F9929F26C1800019448 /* SWP_DetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F9729F26C1800019448 /* SWP_DetailsTableViewCell.swift */; };
+		9A570F9A29F26C1800019448 /* SWP_DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F9829F26C1800019448 /* SWP_DetailsViewController.swift */; };
+		9A570FA429F26CB800019448 /* SWP_DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FA229F26CB800019448 /* SWP_DisplayViewController.swift */; };
+		9A570FA529F26CB800019448 /* SWP_DisplayDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FA329F26CB800019448 /* SWP_DisplayDAL.swift */; };
+		9A570FAA29F26CFB00019448 /* Tools_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FA629F26CFB00019448 /* Tools_TableViewCell.swift */; };
+		9A570FAB29F26CFB00019448 /* Tools_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FA729F26CFB00019448 /* Tools_ViewController.swift */; };
+		9A570FAC29F26CFB00019448 /* ToolsDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FA829F26CFB00019448 /* ToolsDAL.swift */; };
+		9A570FAD29F26CFB00019448 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FA929F26CFB00019448 /* Tools.swift */; };
+		9A570FBA29F26D1500019448 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FAF29F26D1400019448 /* FMDatabaseAdditions.m */; };
+		9A570FBB29F26D1500019448 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FB129F26D1400019448 /* FMDatabaseQueue.m */; };
+		9A570FBC29F26D1500019448 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FB429F26D1400019448 /* FMResultSet.m */; };
+		9A570FBD29F26D1500019448 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FB529F26D1400019448 /* FMDatabase.m */; };
+		9A570FBE29F26D1500019448 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FB729F26D1400019448 /* FMDatabasePool.m */; };
+		9A570FC129F26D3D00019448 /* notificationSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9A570FBF29F26D3D00019448 /* notificationSound.mp3 */; };
+		9A570FC229F26D3D00019448 /* trash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9A570FC029F26D3D00019448 /* trash.mp3 */; };
+		9A570FC529F26D4E00019448 /* output-onlinegiftools.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A570FC329F26D4D00019448 /* output-onlinegiftools.gif */; };
+		9A570FC629F26D4E00019448 /* trash-1991_512.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A570FC429F26D4E00019448 /* trash-1991_512.gif */; };
+		9A570FCA29F26DB200019448 /* DeveloperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FC929F26DB200019448 /* DeveloperViewController.swift */; };
+		9A570FCC29F26E5300019448 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FCB29F26E5300019448 /* Utility.swift */; };
+		9A570FCE29F26E6100019448 /* SIP.db in Resources */ = {isa = PBXBuildFile; fileRef = 9A570FCD29F26E6100019448 /* SIP.db */; };
+		9A570FD129F2702600019448 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FCF29F2702600019448 /* GIF.swift */; };
+		9A570FD229F2702600019448 /* GIFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FD029F2702600019448 /* GIFViewController.swift */; };
+		9A570FD629F2706B00019448 /* Setting_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FD429F2706B00019448 /* Setting_TableViewCell.swift */; };
+		9A570FD729F2706B00019448 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FD529F2706B00019448 /* SettingViewController.swift */; };
+		9A570FD929F271E200019448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A570FD829F271E200019448 /* Main.storyboard */; };
+		9A76239729F2B32700D25D93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A76239629F2B32700D25D93 /* LaunchScreen.storyboard */; };
+		9A92D10229F3DDF1008271AA /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A92D10129F3DDF1008271AA /* FeedBackViewController.swift */; };
+		CF9A0312BF5E894322E6259E /* Pods_SIP_CalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B2019066017FD6C58085E8 /* Pods_SIP_CalculatorTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A1AE1DD29F269B90041B50D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A1AE1BE29F269B80041B50D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A1AE1C529F269B80041B50D;
+			remoteInfo = "SIP-Calculator";
+		};
+		9A1AE1E729F269B90041B50D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A1AE1BE29F269B80041B50D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A1AE1C529F269B80041B50D;
+			remoteInfo = "SIP-Calculator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17B2019066017FD6C58085E8 /* Pods_SIP_CalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIP_CalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6506B34406753E94E75F3754 /* Pods-SIP-CalculatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIP-CalculatorTests.release.xcconfig"; path = "Target Support Files/Pods-SIP-CalculatorTests/Pods-SIP-CalculatorTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A05EB6FC03DB9DF3BDAA890 /* Pods-SIP-Calculator-SIP-CalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIP-Calculator-SIP-CalculatorUITests.debug.xcconfig"; path = "Target Support Files/Pods-SIP-Calculator-SIP-CalculatorUITests/Pods-SIP-Calculator-SIP-CalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		705592C5D213D23D7BA7B6AD /* Pods_SIP_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIP_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7462858EAFBFB5CF5101722D /* Pods-SIP-Calculator-SIP-CalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIP-Calculator-SIP-CalculatorUITests.release.xcconfig"; path = "Target Support Files/Pods-SIP-Calculator-SIP-CalculatorUITests/Pods-SIP-Calculator-SIP-CalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		850C8E9D3C14371691301EBC /* Pods-SIP-Calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIP-Calculator.debug.xcconfig"; path = "Target Support Files/Pods-SIP-Calculator/Pods-SIP-Calculator.debug.xcconfig"; sourceTree = "<group>"; };
+		9A18AB8729F2B4F000EF5D36 /* HttpWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpWrapper.swift; sourceTree = "<group>"; };
+		9A18AB8829F2B4F000EF5D36 /* GlobalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
+		9A1AE1C629F269B80041B50D /* SIP-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SIP-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1AE1C929F269B80041B50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A1AE1CB29F269B80041B50D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9A1AE1CD29F269B80041B50D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A1AE1D229F269B80041B50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A1AE1D729F269B80041B50D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A1AE1DC29F269B90041B50D /* SIP-CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SIP-CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1AE1E029F269B90041B50D /* SIP_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIP_CalculatorTests.swift; sourceTree = "<group>"; };
+		9A1AE1E629F269B90041B50D /* SIP-CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SIP-CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1AE1EA29F269B90041B50D /* SIP_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIP_CalculatorUITests.swift; sourceTree = "<group>"; };
+		9A1AE1EC29F269B90041B50D /* SIP_CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIP_CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A570F7A29F26B0700019448 /* SIP_PlannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIP_PlannerViewController.swift; sourceTree = "<group>"; };
+		9A570F7B29F26B0700019448 /* SIP_PlannerDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIP_PlannerDAL.swift; sourceTree = "<group>"; };
+		9A570F7F29F26B2800019448 /* Lumpsum_DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lumpsum_DisplayViewController.swift; sourceTree = "<group>"; };
+		9A570F8029F26B2800019448 /* Lumpsum_DisplayDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lumpsum_DisplayDAL.swift; sourceTree = "<group>"; };
+		9A570F8429F26B5800019448 /* Details_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Details_ViewController.swift; sourceTree = "<group>"; };
+		9A570F8529F26B5800019448 /* Details_TableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Details_TableTableViewCell.swift; sourceTree = "<group>"; };
+		9A570F8B29F26BA000019448 /* SIP_DisplayDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIP_DisplayDAL.swift; sourceTree = "<group>"; };
+		9A570F8C29F26BA000019448 /* SIP_Display_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIP_Display_ViewController.swift; sourceTree = "<group>"; };
+		9A570F8F29F26BB700019448 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		9A570F9029F26BB700019448 /* History_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History_TableViewCell.swift; sourceTree = "<group>"; };
+		9A570F9129F26BB700019448 /* HistoryDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDAL.swift; sourceTree = "<group>"; };
+		9A570F9229F26BB700019448 /* History_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History_ViewController.swift; sourceTree = "<group>"; };
+		9A570F9729F26C1800019448 /* SWP_DetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWP_DetailsTableViewCell.swift; sourceTree = "<group>"; };
+		9A570F9829F26C1800019448 /* SWP_DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWP_DetailsViewController.swift; sourceTree = "<group>"; };
+		9A570FA229F26CB800019448 /* SWP_DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWP_DisplayViewController.swift; sourceTree = "<group>"; };
+		9A570FA329F26CB800019448 /* SWP_DisplayDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWP_DisplayDAL.swift; sourceTree = "<group>"; };
+		9A570FA629F26CFB00019448 /* Tools_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools_TableViewCell.swift; sourceTree = "<group>"; };
+		9A570FA729F26CFB00019448 /* Tools_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools_ViewController.swift; sourceTree = "<group>"; };
+		9A570FA829F26CFB00019448 /* ToolsDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsDAL.swift; sourceTree = "<group>"; };
+		9A570FA929F26CFB00019448 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		9A570FAE29F26D1300019448 /* SIP-Calculator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SIP-Calculator-Bridging-Header.h"; sourceTree = "<group>"; };
+		9A570FAF29F26D1400019448 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		9A570FB029F26D1400019448 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		9A570FB129F26D1400019448 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		9A570FB229F26D1400019448 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		9A570FB329F26D1400019448 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		9A570FB429F26D1400019448 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		9A570FB529F26D1400019448 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		9A570FB629F26D1400019448 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		9A570FB729F26D1400019448 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		9A570FB829F26D1500019448 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		9A570FB929F26D1500019448 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		9A570FBF29F26D3D00019448 /* notificationSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = notificationSound.mp3; sourceTree = "<group>"; };
+		9A570FC029F26D3D00019448 /* trash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trash.mp3; sourceTree = "<group>"; };
+		9A570FC329F26D4D00019448 /* output-onlinegiftools.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "output-onlinegiftools.gif"; sourceTree = "<group>"; };
+		9A570FC429F26D4E00019448 /* trash-1991_512.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "trash-1991_512.gif"; sourceTree = "<group>"; };
+		9A570FC929F26DB200019448 /* DeveloperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperViewController.swift; sourceTree = "<group>"; };
+		9A570FCB29F26E5300019448 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		9A570FCD29F26E6100019448 /* SIP.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = SIP.db; sourceTree = "<group>"; };
+		9A570FCF29F2702600019448 /* GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
+		9A570FD029F2702600019448 /* GIFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFViewController.swift; sourceTree = "<group>"; };
+		9A570FD429F2706B00019448 /* Setting_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting_TableViewCell.swift; sourceTree = "<group>"; };
+		9A570FD529F2706B00019448 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		9A570FD829F271E200019448 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9A76239629F2B32700D25D93 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9A92D10129F3DDF1008271AA /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
+		B4490F7C2AF3E87B25C54730 /* Pods-SIP-CalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIP-CalculatorTests.debug.xcconfig"; path = "Target Support Files/Pods-SIP-CalculatorTests/Pods-SIP-CalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA52F883C40C60FC562F5744 /* Pods-SIP-Calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIP-Calculator.release.xcconfig"; path = "Target Support Files/Pods-SIP-Calculator/Pods-SIP-Calculator.release.xcconfig"; sourceTree = "<group>"; };
+		FBFD20C2F4AF3DA5B5EE8C98 /* Pods_SIP_Calculator_SIP_CalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIP_Calculator_SIP_CalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A1AE1C329F269B80041B50D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD152AC284F60858A84F7B5 /* Pods_SIP_Calculator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1AE1D929F269B90041B50D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF9A0312BF5E894322E6259E /* Pods_SIP_CalculatorTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1AE1E329F269B90041B50D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76065C9F7BA9A8A5EBC63EF3 /* Pods_SIP_Calculator_SIP_CalculatorUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17043E91BDFC05F0BC2E6DBB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				705592C5D213D23D7BA7B6AD /* Pods_SIP_Calculator.framework */,
+				FBFD20C2F4AF3DA5B5EE8C98 /* Pods_SIP_Calculator_SIP_CalculatorUITests.framework */,
+				17B2019066017FD6C58085E8 /* Pods_SIP_CalculatorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A18AB8629F2B4D900EF5D36 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				9A18AB8829F2B4F000EF5D36 /* GlobalData.swift */,
+				9A18AB8729F2B4F000EF5D36 /* HttpWrapper.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		9A1AE1BD29F269B80041B50D = {
+			isa = PBXGroup;
+			children = (
+				9A1AE1C829F269B80041B50D /* SIP-Calculator */,
+				9A1AE1DF29F269B90041B50D /* SIP-CalculatorTests */,
+				9A1AE1E929F269B90041B50D /* SIP-CalculatorUITests */,
+				9A1AE1C729F269B80041B50D /* Products */,
+				FB16E1ED26543E4C4FCB865C /* Pods */,
+				17043E91BDFC05F0BC2E6DBB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9A1AE1C729F269B80041B50D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A1AE1C629F269B80041B50D /* SIP-Calculator.app */,
+				9A1AE1DC29F269B90041B50D /* SIP-CalculatorTests.xctest */,
+				9A1AE1E629F269B90041B50D /* SIP-CalculatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A1AE1C829F269B80041B50D /* SIP-Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				9A570FCD29F26E6100019448 /* SIP.db */,
+				9A570FCB29F26E5300019448 /* Utility.swift */,
+				9A18AB8629F2B4D900EF5D36 /* Global */,
+				9A570FA129F26C8000019448 /* Developer screen */,
+				9A570FA029F26C6E00019448 /* Feedback */,
+				9A570F9F29F26C6700019448 /* GIFs */,
+				9A570F9E29F26C5E00019448 /* Sound */,
+				9A570F9D29F26C5200019448 /* FMDB */,
+				9A570F9C29F26C4400019448 /* Tools */,
+				9A570F9B29F26C2800019448 /* SWP_Display */,
+				9A570F8A29F26B8600019448 /* SWP_Details */,
+				9A570F8929F26B7600019448 /* History */,
+				9A570F8829F26B6500019448 /* SIP_Display */,
+				9A570F8329F26B3400019448 /* SIP_Lum_Details */,
+				9A570F7E29F26B0F00019448 /* Lumpsum */,
+				9A570F7929F26AF100019448 /* SIP_Planner */,
+				9A570FD329F2705000019448 /* Setting */,
+				9A1AE1C929F269B80041B50D /* AppDelegate.swift */,
+				9A570FCF29F2702600019448 /* GIF.swift */,
+				9A570FD029F2702600019448 /* GIFViewController.swift */,
+				9A1AE1CB29F269B80041B50D /* SceneDelegate.swift */,
+				9A1AE1CD29F269B80041B50D /* ViewController.swift */,
+				9A570FD829F271E200019448 /* Main.storyboard */,
+				9A76239629F2B32700D25D93 /* LaunchScreen.storyboard */,
+				9A1AE1D229F269B80041B50D /* Assets.xcassets */,
+				9A1AE1D729F269B80041B50D /* Info.plist */,
+			);
+			path = "SIP-Calculator";
+			sourceTree = "<group>";
+		};
+		9A1AE1DF29F269B90041B50D /* SIP-CalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A1AE1E029F269B90041B50D /* SIP_CalculatorTests.swift */,
+			);
+			path = "SIP-CalculatorTests";
+			sourceTree = "<group>";
+		};
+		9A1AE1E929F269B90041B50D /* SIP-CalculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9A1AE1EA29F269B90041B50D /* SIP_CalculatorUITests.swift */,
+				9A1AE1EC29F269B90041B50D /* SIP_CalculatorUITestsLaunchTests.swift */,
+			);
+			path = "SIP-CalculatorUITests";
+			sourceTree = "<group>";
+		};
+		9A570F7929F26AF100019448 /* SIP_Planner */ = {
+			isa = PBXGroup;
+			children = (
+				9A570F7B29F26B0700019448 /* SIP_PlannerDAL.swift */,
+				9A570F7A29F26B0700019448 /* SIP_PlannerViewController.swift */,
+			);
+			path = SIP_Planner;
+			sourceTree = "<group>";
+		};
+		9A570F7E29F26B0F00019448 /* Lumpsum */ = {
+			isa = PBXGroup;
+			children = (
+				9A570F8029F26B2800019448 /* Lumpsum_DisplayDAL.swift */,
+				9A570F7F29F26B2800019448 /* Lumpsum_DisplayViewController.swift */,
+			);
+			path = Lumpsum;
+			sourceTree = "<group>";
+		};
+		9A570F8329F26B3400019448 /* SIP_Lum_Details */ = {
+			isa = PBXGroup;
+			children = (
+				9A570F8529F26B5800019448 /* Details_TableTableViewCell.swift */,
+				9A570F8429F26B5800019448 /* Details_ViewController.swift */,
+			);
+			path = SIP_Lum_Details;
+			sourceTree = "<group>";
+		};
+		9A570F8829F26B6500019448 /* SIP_Display */ = {
+			isa = PBXGroup;
+			children = (
+				9A570F8C29F26BA000019448 /* SIP_Display_ViewController.swift */,
+				9A570F8B29F26BA000019448 /* SIP_DisplayDAL.swift */,
+			);
+			path = SIP_Display;
+			sourceTree = "<group>";
+		};
+		9A570F8929F26B7600019448 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				9A570F9029F26BB700019448 /* History_TableViewCell.swift */,
+				9A570F9229F26BB700019448 /* History_ViewController.swift */,
+				9A570F8F29F26BB700019448 /* History.swift */,
+				9A570F9129F26BB700019448 /* HistoryDAL.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		9A570F8A29F26B8600019448 /* SWP_Details */ = {
+			isa = PBXGroup;
+			children = (
+				9A570F9729F26C1800019448 /* SWP_DetailsTableViewCell.swift */,
+				9A570F9829F26C1800019448 /* SWP_DetailsViewController.swift */,
+			);
+			path = SWP_Details;
+			sourceTree = "<group>";
+		};
+		9A570F9B29F26C2800019448 /* SWP_Display */ = {
+			isa = PBXGroup;
+			children = (
+				9A570FA329F26CB800019448 /* SWP_DisplayDAL.swift */,
+				9A570FA229F26CB800019448 /* SWP_DisplayViewController.swift */,
+			);
+			path = SWP_Display;
+			sourceTree = "<group>";
+		};
+		9A570F9C29F26C4400019448 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				9A570FA629F26CFB00019448 /* Tools_TableViewCell.swift */,
+				9A570FA729F26CFB00019448 /* Tools_ViewController.swift */,
+				9A570FA929F26CFB00019448 /* Tools.swift */,
+				9A570FA829F26CFB00019448 /* ToolsDAL.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		9A570F9D29F26C5200019448 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				9A570FB829F26D1500019448 /* FMDatabase.h */,
+				9A570FB529F26D1400019448 /* FMDatabase.m */,
+				9A570FB029F26D1400019448 /* FMDatabaseAdditions.h */,
+				9A570FAF29F26D1400019448 /* FMDatabaseAdditions.m */,
+				9A570FB929F26D1500019448 /* FMDatabasePool.h */,
+				9A570FB729F26D1400019448 /* FMDatabasePool.m */,
+				9A570FB629F26D1400019448 /* FMDatabaseQueue.h */,
+				9A570FB129F26D1400019448 /* FMDatabaseQueue.m */,
+				9A570FB229F26D1400019448 /* FMDB.h */,
+				9A570FB329F26D1400019448 /* FMResultSet.h */,
+				9A570FB429F26D1400019448 /* FMResultSet.m */,
+				9A570FAE29F26D1300019448 /* SIP-Calculator-Bridging-Header.h */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		9A570F9E29F26C5E00019448 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				9A570FBF29F26D3D00019448 /* notificationSound.mp3 */,
+				9A570FC029F26D3D00019448 /* trash.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		9A570F9F29F26C6700019448 /* GIFs */ = {
+			isa = PBXGroup;
+			children = (
+				9A570FC329F26D4D00019448 /* output-onlinegiftools.gif */,
+				9A570FC429F26D4E00019448 /* trash-1991_512.gif */,
+			);
+			path = GIFs;
+			sourceTree = "<group>";
+		};
+		9A570FA029F26C6E00019448 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				9A92D10129F3DDF1008271AA /* FeedBackViewController.swift */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		9A570FA129F26C8000019448 /* Developer screen */ = {
+			isa = PBXGroup;
+			children = (
+				9A570FC929F26DB200019448 /* DeveloperViewController.swift */,
+			);
+			path = "Developer screen";
+			sourceTree = "<group>";
+		};
+		9A570FD329F2705000019448 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				9A570FD429F2706B00019448 /* Setting_TableViewCell.swift */,
+				9A570FD529F2706B00019448 /* SettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		FB16E1ED26543E4C4FCB865C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				850C8E9D3C14371691301EBC /* Pods-SIP-Calculator.debug.xcconfig */,
+				DA52F883C40C60FC562F5744 /* Pods-SIP-Calculator.release.xcconfig */,
+				6A05EB6FC03DB9DF3BDAA890 /* Pods-SIP-Calculator-SIP-CalculatorUITests.debug.xcconfig */,
+				7462858EAFBFB5CF5101722D /* Pods-SIP-Calculator-SIP-CalculatorUITests.release.xcconfig */,
+				B4490F7C2AF3E87B25C54730 /* Pods-SIP-CalculatorTests.debug.xcconfig */,
+				6506B34406753E94E75F3754 /* Pods-SIP-CalculatorTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A1AE1C529F269B80041B50D /* SIP-Calculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A1AE1F029F269B90041B50D /* Build configuration list for PBXNativeTarget "SIP-Calculator" */;
+			buildPhases = (
+				47A12A03AD0359E06A53C58C /* [CP] Check Pods Manifest.lock */,
+				9A1AE1C229F269B80041B50D /* Sources */,
+				9A1AE1C329F269B80041B50D /* Frameworks */,
+				9A1AE1C429F269B80041B50D /* Resources */,
+				5FED44F11AC8568DBFB9662F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SIP-Calculator";
+			productName = "SIP-Calculator";
+			productReference = 9A1AE1C629F269B80041B50D /* SIP-Calculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A1AE1DB29F269B90041B50D /* SIP-CalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A1AE1F329F269B90041B50D /* Build configuration list for PBXNativeTarget "SIP-CalculatorTests" */;
+			buildPhases = (
+				A963DB882FB038C4BB78A0AA /* [CP] Check Pods Manifest.lock */,
+				9A1AE1D829F269B90041B50D /* Sources */,
+				9A1AE1D929F269B90041B50D /* Frameworks */,
+				9A1AE1DA29F269B90041B50D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A1AE1DE29F269B90041B50D /* PBXTargetDependency */,
+			);
+			name = "SIP-CalculatorTests";
+			productName = "SIP-CalculatorTests";
+			productReference = 9A1AE1DC29F269B90041B50D /* SIP-CalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9A1AE1E529F269B90041B50D /* SIP-CalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A1AE1F629F269B90041B50D /* Build configuration list for PBXNativeTarget "SIP-CalculatorUITests" */;
+			buildPhases = (
+				C9392E3C87D153346AD0D80E /* [CP] Check Pods Manifest.lock */,
+				9A1AE1E229F269B90041B50D /* Sources */,
+				9A1AE1E329F269B90041B50D /* Frameworks */,
+				9A1AE1E429F269B90041B50D /* Resources */,
+				70653E06D7EEE67499ADCDEC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A1AE1E829F269B90041B50D /* PBXTargetDependency */,
+			);
+			name = "SIP-CalculatorUITests";
+			productName = "SIP-CalculatorUITests";
+			productReference = 9A1AE1E629F269B90041B50D /* SIP-CalculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A1AE1BE29F269B80041B50D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					9A1AE1C529F269B80041B50D = {
+						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
+					};
+					9A1AE1DB29F269B90041B50D = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 9A1AE1C529F269B80041B50D;
+					};
+					9A1AE1E529F269B90041B50D = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 9A1AE1C529F269B80041B50D;
+					};
+				};
+			};
+			buildConfigurationList = 9A1AE1C129F269B80041B50D /* Build configuration list for PBXProject "SIP-Calculator" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A1AE1BD29F269B80041B50D;
+			productRefGroup = 9A1AE1C729F269B80041B50D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A1AE1C529F269B80041B50D /* SIP-Calculator */,
+				9A1AE1DB29F269B90041B50D /* SIP-CalculatorTests */,
+				9A1AE1E529F269B90041B50D /* SIP-CalculatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A1AE1C429F269B80041B50D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A570FD929F271E200019448 /* Main.storyboard in Resources */,
+				9A76239729F2B32700D25D93 /* LaunchScreen.storyboard in Resources */,
+				9A570FC629F26D4E00019448 /* trash-1991_512.gif in Resources */,
+				9A1AE1D329F269B80041B50D /* Assets.xcassets in Resources */,
+				9A570FC529F26D4E00019448 /* output-onlinegiftools.gif in Resources */,
+				9A570FC229F26D3D00019448 /* trash.mp3 in Resources */,
+				9A570FCE29F26E6100019448 /* SIP.db in Resources */,
+				9A570FC129F26D3D00019448 /* notificationSound.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1AE1DA29F269B90041B50D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1AE1E429F269B90041B50D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47A12A03AD0359E06A53C58C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SIP-Calculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FED44F11AC8568DBFB9662F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SIP-Calculator/Pods-SIP-Calculator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SIP-Calculator/Pods-SIP-Calculator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SIP-Calculator/Pods-SIP-Calculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70653E06D7EEE67499ADCDEC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SIP-Calculator-SIP-CalculatorUITests/Pods-SIP-Calculator-SIP-CalculatorUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SIP-Calculator-SIP-CalculatorUITests/Pods-SIP-Calculator-SIP-CalculatorUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SIP-Calculator-SIP-CalculatorUITests/Pods-SIP-Calculator-SIP-CalculatorUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A963DB882FB038C4BB78A0AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SIP-CalculatorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9392E3C87D153346AD0D80E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SIP-Calculator-SIP-CalculatorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A1AE1C229F269B80041B50D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A570F7C29F26B0700019448 /* SIP_PlannerViewController.swift in Sources */,
+				9A570FA529F26CB800019448 /* SWP_DisplayDAL.swift in Sources */,
+				9A570F8129F26B2800019448 /* Lumpsum_DisplayViewController.swift in Sources */,
+				9A570F9A29F26C1800019448 /* SWP_DetailsViewController.swift in Sources */,
+				9A1AE1CE29F269B80041B50D /* ViewController.swift in Sources */,
+				9A570FD729F2706B00019448 /* SettingViewController.swift in Sources */,
+				9A570FAB29F26CFB00019448 /* Tools_ViewController.swift in Sources */,
+				9A570FBC29F26D1500019448 /* FMResultSet.m in Sources */,
+				9A570FAD29F26CFB00019448 /* Tools.swift in Sources */,
+				9A570FD229F2702600019448 /* GIFViewController.swift in Sources */,
+				9A570F9629F26BB700019448 /* History_ViewController.swift in Sources */,
+				9A570F8629F26B5800019448 /* Details_ViewController.swift in Sources */,
+				9A18AB8929F2B4F000EF5D36 /* HttpWrapper.swift in Sources */,
+				9A570FD629F2706B00019448 /* Setting_TableViewCell.swift in Sources */,
+				9A570F9429F26BB700019448 /* History_TableViewCell.swift in Sources */,
+				9A92D10229F3DDF1008271AA /* FeedBackViewController.swift in Sources */,
+				9A570FBB29F26D1500019448 /* FMDatabaseQueue.m in Sources */,
+				9A570FBD29F26D1500019448 /* FMDatabase.m in Sources */,
+				9A570FAC29F26CFB00019448 /* ToolsDAL.swift in Sources */,
+				9A570F8229F26B2800019448 /* Lumpsum_DisplayDAL.swift in Sources */,
+				9A570FA429F26CB800019448 /* SWP_DisplayViewController.swift in Sources */,
+				9A570FCA29F26DB200019448 /* DeveloperViewController.swift in Sources */,
+				9A570F9529F26BB700019448 /* HistoryDAL.swift in Sources */,
+				9A570F8729F26B5800019448 /* Details_TableTableViewCell.swift in Sources */,
+				9A570F9329F26BB700019448 /* History.swift in Sources */,
+				9A1AE1CA29F269B80041B50D /* AppDelegate.swift in Sources */,
+				9A570F9929F26C1800019448 /* SWP_DetailsTableViewCell.swift in Sources */,
+				9A570FAA29F26CFB00019448 /* Tools_TableViewCell.swift in Sources */,
+				9A570F8D29F26BA000019448 /* SIP_DisplayDAL.swift in Sources */,
+				9A570F7D29F26B0700019448 /* SIP_PlannerDAL.swift in Sources */,
+				9A18AB8A29F2B4F000EF5D36 /* GlobalData.swift in Sources */,
+				9A570FD129F2702600019448 /* GIF.swift in Sources */,
+				9A570FCC29F26E5300019448 /* Utility.swift in Sources */,
+				9A1AE1CC29F269B80041B50D /* SceneDelegate.swift in Sources */,
+				9A570FBE29F26D1500019448 /* FMDatabasePool.m in Sources */,
+				9A570F8E29F26BA000019448 /* SIP_Display_ViewController.swift in Sources */,
+				9A570FBA29F26D1500019448 /* FMDatabaseAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1AE1D829F269B90041B50D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1AE1E129F269B90041B50D /* SIP_CalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1AE1E229F269B90041B50D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1AE1EB29F269B90041B50D /* SIP_CalculatorUITests.swift in Sources */,
+				9A1AE1ED29F269B90041B50D /* SIP_CalculatorUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A1AE1DE29F269B90041B50D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A1AE1C529F269B80041B50D /* SIP-Calculator */;
+			targetProxy = 9A1AE1DD29F269B90041B50D /* PBXContainerItemProxy */;
+		};
+		9A1AE1E829F269B90041B50D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A1AE1C529F269B80041B50D /* SIP-Calculator */;
+			targetProxy = 9A1AE1E729F269B90041B50D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9A1AE1EE29F269B90041B50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9A1AE1EF29F269B90041B50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A1AE1F129F269B90041B50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 850C8E9D3C14371691301EBC /* Pods-SIP-Calculator.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SIP-Calculator/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SIP.SIP-Calculator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SIP-Calculator/FMDB/SIP-Calculator-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9A1AE1F229F269B90041B50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA52F883C40C60FC562F5744 /* Pods-SIP-Calculator.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SIP-Calculator/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SIP.SIP-Calculator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SIP-Calculator/FMDB/SIP-Calculator-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9A1AE1F429F269B90041B50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4490F7C2AF3E87B25C54730 /* Pods-SIP-CalculatorTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SIP.SIP-CalculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SIP-Calculator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SIP-Calculator";
+			};
+			name = Debug;
+		};
+		9A1AE1F529F269B90041B50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6506B34406753E94E75F3754 /* Pods-SIP-CalculatorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SIP.SIP-CalculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SIP-Calculator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SIP-Calculator";
+			};
+			name = Release;
+		};
+		9A1AE1F729F269B90041B50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A05EB6FC03DB9DF3BDAA890 /* Pods-SIP-Calculator-SIP-CalculatorUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SIP.SIP-CalculatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SIP-Calculator";
+			};
+			name = Debug;
+		};
+		9A1AE1F829F269B90041B50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7462858EAFBFB5CF5101722D /* Pods-SIP-Calculator-SIP-CalculatorUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SIP.SIP-CalculatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SIP-Calculator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A1AE1C129F269B80041B50D /* Build configuration list for PBXProject "SIP-Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A1AE1EE29F269B90041B50D /* Debug */,
+				9A1AE1EF29F269B90041B50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A1AE1F029F269B90041B50D /* Build configuration list for PBXNativeTarget "SIP-Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A1AE1F129F269B90041B50D /* Debug */,
+				9A1AE1F229F269B90041B50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A1AE1F329F269B90041B50D /* Build configuration list for PBXNativeTarget "SIP-CalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A1AE1F429F269B90041B50D /* Debug */,
+				9A1AE1F529F269B90041B50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A1AE1F629F269B90041B50D /* Build configuration list for PBXNativeTarget "SIP-CalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A1AE1F729F269B90041B50D /* Debug */,
+				9A1AE1F829F269B90041B50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A1AE1BE29F269B80041B50D /* Project object */;
+}

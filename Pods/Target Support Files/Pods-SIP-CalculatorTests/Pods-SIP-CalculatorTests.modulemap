@@ -1,0 +1,6 @@
+framework module Pods_SIP_CalculatorTests {
+  umbrella header "Pods-SIP-CalculatorTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (5.6.4)
+  - AnimatedTabBar (0.1.7)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - IQKeyboardManagerSwift (6.5.11)
+  - ObjectMapper (4.2.0)
+  - TextFieldEffects (1.6.0)
+  - TweeTextField (1.6.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - AnimatedTabBar
+  - Charts
+  - IQKeyboardManagerSwift
+  - ObjectMapper
+  - TextFieldEffects
+  - TweeTextField
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AnimatedTabBar
+    - Charts
+    - IQKeyboardManagerSwift
+    - ObjectMapper
+    - TextFieldEffects
+    - TweeTextField
+
+SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  AnimatedTabBar: ce6bc2c2993bd74b4b51c7977631e3321f417095
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
+  TweeTextField: 726de695eead9784f7ed02e22f6944bfcfcca07a
+
+PODFILE CHECKSUM: 0e1a012b5d14823ecea98dbd5d8ac63b8241311e
+
+COCOAPODS: 1.12.1

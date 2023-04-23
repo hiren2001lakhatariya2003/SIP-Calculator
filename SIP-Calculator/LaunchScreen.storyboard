@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController storyboardIdentifier="LaunchScreenViewController" id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="output-onlinegiftools.gif" translatesAutoresizingMaskIntoConstraints="NO" id="OYQ-FO-8v0">
+                                <rect key="frame" x="46.666666666666657" y="303" width="300" height="246"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="246" id="I98-RK-WHw"/>
+                                    <constraint firstAttribute="width" constant="300" id="XXc-Gp-0Pd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIP Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eG6-mn-osy">
+                                <rect key="frame" x="100.66666666666669" y="97" width="192" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38t-43-gQA">
+                                <rect key="frame" x="0.0" y="758" width="393" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DU_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fbL-8T-Dj8">
+                                        <rect key="frame" x="5" y="5" width="235.66666666666666" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aswdc" translatesAutoresizingMaskIntoConstraints="NO" id="83E-wh-wFG">
+                                        <rect key="frame" x="240.66666666666663" y="5" width="147.33333333333337" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="83E-wh-wFG" secondAttribute="bottom" constant="5" id="0UX-d6-liz"/>
+                                    <constraint firstAttribute="trailing" secondItem="83E-wh-wFG" secondAttribute="trailing" constant="5" id="61c-qC-Ujm"/>
+                                    <constraint firstAttribute="height" constant="60" id="8QW-aG-nEf"/>
+                                    <constraint firstItem="fbL-8T-Dj8" firstAttribute="width" secondItem="38t-43-gQA" secondAttribute="width" multiplier="0.6" id="A9O-u9-Srf"/>
+                                    <constraint firstAttribute="bottom" secondItem="fbL-8T-Dj8" secondAttribute="bottom" constant="5" id="FgE-L4-Our"/>
+                                    <constraint firstItem="fbL-8T-Dj8" firstAttribute="leading" secondItem="38t-43-gQA" secondAttribute="leading" constant="5" id="KVy-RH-HtL"/>
+                                    <constraint firstItem="83E-wh-wFG" firstAttribute="leading" secondItem="fbL-8T-Dj8" secondAttribute="trailing" id="WLj-bo-2x6"/>
+                                    <constraint firstItem="fbL-8T-Dj8" firstAttribute="top" secondItem="38t-43-gQA" secondAttribute="top" constant="5" id="hNJ-vH-f6r"/>
+                                    <constraint firstItem="83E-wh-wFG" firstAttribute="top" secondItem="38t-43-gQA" secondAttribute="top" constant="5" id="whK-Qz-XIx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eG6-mn-osy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HlC-vx-DzQ"/>
+                            <constraint firstItem="38t-43-gQA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="P5w-zv-nUo"/>
+                            <constraint firstItem="OYQ-FO-8v0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WDO-us-QLM"/>
+                            <constraint firstItem="OYQ-FO-8v0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Wy0-xX-LA4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="38t-43-gQA" secondAttribute="trailing" id="ZhJ-fh-qhi"/>
+                            <constraint firstItem="OYQ-FO-8v0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ckd-VD-Aff"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="38t-43-gQA" secondAttribute="bottom" id="onj-F3-f7V"/>
+                            <constraint firstItem="eG6-mn-osy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="vJb-Xh-L3A"/>
+                            <constraint firstItem="OYQ-FO-8v0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="xD4-PL-TeH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="GIF" destination="OYQ-FO-8v0" id="OdA-fl-cHD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="DU_Logo" width="800" height="261"/>
+        <image name="aswdc" width="797" height="532"/>
+        <image name="output-onlinegiftools.gif" width="465" height="465"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

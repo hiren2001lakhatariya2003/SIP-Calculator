@@ -1,0 +1,6 @@
+framework module Pods_SIP_Calculator {
+  umbrella header "Pods-SIP-Calculator-umbrella.h"
+
+  export *
+  module * { export * }
+}
