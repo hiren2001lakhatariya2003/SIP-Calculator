@@ -57,12 +57,10 @@ class Lumpsum_DisplayViewController: UIViewController, ChartViewDelegate , UITex
     
     
     static func getCurrentDate() -> String {
-           let dateFormatter = DateFormatter()
-           dateFormatter.dateFormat = "dd/MM/yyyy"
-           return dateFormatter.string(from: Date())
-       }
-    
-    
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        return dateFormatter.string(from: Date())
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,7 +127,7 @@ class Lumpsum_DisplayViewController: UIViewController, ChartViewDelegate , UITex
                 Details_Button.isHidden = true
                 Main_Colour_View.backgroundColor = UIColor(red: (230/255), green: (230/255), blue: (230/255), alpha: 1)
             }
-           
+            
             else
             {
                 let interest = TotalAmount * pow((1.0 + (RateOfReturn/100)),Year)
@@ -179,16 +177,9 @@ class Lumpsum_DisplayViewController: UIViewController, ChartViewDelegate , UITex
                     Pie_Chart.chartDescription?.enabled = false
                     Pie_Chart.minOffset = 0
                     
-                   
-                    
                 }
             }
-            
-           
-            
         }
-        
-        
     }
     
     @IBAction func Save_Result(_ sender: Any) {
@@ -197,14 +188,14 @@ class Lumpsum_DisplayViewController: UIViewController, ChartViewDelegate , UITex
         
         UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
             self.notification.alpha = 1.0
-                    }, completion: {
-                        (finished: Bool) -> Void in
-                    //Once the label is completely invisible, set the text and fade it back in
-                    // Fade in
-                        UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
-                            self.notification.alpha = 0.0
-                        }, completion: nil)
-            })
+        }, completion: {
+            (finished: Bool) -> Void in
+            //Once the label is completely invisible, set the text and fade it back in
+            // Fade in
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+                self.notification.alpha = 0.0
+            }, completion: nil)
+        })
         
         
         let h : History = History()
@@ -231,7 +222,7 @@ class Lumpsum_DisplayViewController: UIViewController, ChartViewDelegate , UITex
     @IBAction func Reset(_ sender: UIButton) {
         value_Graph_View.isHidden = true
         Description_View.isHidden = true
-//        Scroll_view.isScrollEnabled = false
+        //        Scroll_view.isScrollEnabled = false
         Details_Button.isHidden = true
         Main_Colour_View.backgroundColor = .white
         Total_Investment.text = ""
@@ -252,11 +243,9 @@ class Lumpsum_DisplayViewController: UIViewController, ChartViewDelegate , UITex
         dvc.TotalAmount = TotalAmount
         dvc.RateOfReturn = RateOfReturn
         dvc.Tenure = Year
-        
         dvc.TotalInvestAmount = TotalAmount
         dvc.ExpectedReturn = FinalEstimatedValue
         dvc.TotalValue = FinalValue
-        
         dvc.fromScreen = "Lumpsum"
         self.navigationController?.pushViewController(dvc, animated: true)
         
@@ -271,7 +260,7 @@ class Lumpsum_DisplayViewController: UIViewController, ChartViewDelegate , UITex
     }
     
     @IBAction func Historys(_ sender: UIBarButtonItem) {
-//        History_ViewController
+        //        History_ViewController
         
         let Historys : History_ViewController = storyboard?.instantiateViewController(withIdentifier: "History_ViewController") as! History_ViewController
         self.navigationController?.pushViewController(Historys, animated: true)

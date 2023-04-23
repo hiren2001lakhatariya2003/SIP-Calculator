@@ -29,7 +29,7 @@ class Lumpsum_DisplayDAL: NSObject {
                     Status = false
                 }
             }
-           
+            
         }
         else
         {

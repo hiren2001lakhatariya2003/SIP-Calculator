@@ -57,11 +57,6 @@ import SystemConfiguration
         self.txtmessage.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         self.lblFeedback.layer.cornerRadius = 5
         self.lblFeedback.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        //        self.setTextFieldBorder(txtname, bottomLine: bottomline)
-        //        self.setTextFieldBorder(txtcontact, bottomLine: bottomline1)
-        //        self.setTextFieldBorder(txtEmail, bottomLine: bottomline2)
-       // txtname.becomeFirstResponder()
-        
         txtcontact.delegate = self
         
     }
@@ -88,7 +83,7 @@ import SystemConfiguration
         let maxLength = 10
         let currentString: NSString = textField.text! as NSString
         let newString: NSString =
-            currentString.replacingCharacters(in: range, with: string) as NSString
+        currentString.replacingCharacters(in: range, with: string) as NSString
         return newString.length <= maxLength
         
     }
@@ -106,7 +101,6 @@ import SystemConfiguration
         // Dispose of any resources that can be recreated.
     }
     
-    
     @IBAction func clearAction(_ sender: Any) {
         txtname.text = ""
         txtmessage.text = ""
@@ -114,7 +108,6 @@ import SystemConfiguration
         txtcontact.text = ""
         txtname.becomeFirstResponder()
     }
-    
     
     @IBAction func sendMail(_ sender: AnyObject) {
         
@@ -150,7 +143,7 @@ import SystemConfiguration
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-            
+        
         else
         {
             serviceCall()
@@ -203,12 +196,7 @@ import SystemConfiguration
             }))
             
             self.present(alert, animated: true, completion: nil)
-            
-            
         }
-        
-        
-        
     }
     
     func HttpWrapperfetchDataSuccessWithArray(_ wrapper: HttpWrapper, dicsResponse: [AnyObject]) {
@@ -218,15 +206,14 @@ import SystemConfiguration
     private func HttpWrapperfetchDataFail(_ wrapper: HttpWrapper, error: NSError) {
         hideActivityIndicator()
         
-         GlobalData.showMessage(self1: self, message: "Error occurred please try again later")
-        
+        GlobalData.showMessage(self1: self, message: "Error occurred please try again later")
     }
     
     func hexStringToUIColor (_ hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         
         if (cString.hasPrefix("#")) {
-//            cString = cString.substring(from: cString.index(cString.startIndex, offsetBy: 1))
+            //            cString = cString.substring(from: cString.index(cString.startIndex, offsetBy: 1))
             cString = String(cString.suffix(from: cString.index(cString.startIndex, offsetBy: 1)))
         }
         

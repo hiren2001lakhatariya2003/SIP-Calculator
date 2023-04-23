@@ -13,7 +13,6 @@ class History: NSObject {
     var toolId : Int32 = Int32()
     var toolName : String = String();
     // SIP-INPUT
-   
     var SIP_MonthlyAmount : Double = Double();
     var SIP_RateOfReturn :  Double = Double();
     var SIP_Year : Double = Double();
@@ -22,7 +21,6 @@ class History: NSObject {
     var SIP_ExpectedReturn : Double = Double();
     var SIP_TotalValue : Double = Double();
     var SIP_Date : String = String()
-    
     //LUMPSUM-INPUT
     var Lumpsum_TotalInvestment : Double = Double()
     var Lumpsum_RateOfReturn : Double = Double()
@@ -43,7 +41,6 @@ class History: NSObject {
     var SWP_FinalBalance : Double = Double()
     var SWP_Count : Int = Int()
     var SWP_Date : String = String()
-    
     // SIPP-INPUT
     var SIPP_ExpectedAmount : Double  = Double()
     var SIPP_Year : Double  = Double()

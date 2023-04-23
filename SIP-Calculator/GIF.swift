@@ -65,8 +65,8 @@ extension UIImage {
         // Check for existance of gif
         guard let bundleURL = Bundle.main
             .url(forResource: name, withExtension: "gif") else {
-                print("SwiftGif: This image named \"\(name)\" does not exist")
-                return nil
+            print("SwiftGif: This image named \"\(name)\" does not exist")
+            return nil
         }
         
         // Validate data

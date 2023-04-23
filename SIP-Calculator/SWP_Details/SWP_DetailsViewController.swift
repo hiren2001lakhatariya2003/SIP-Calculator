@@ -77,7 +77,6 @@ class SWP_DetailsViewController: UIViewController, UITableViewDelegate, UITableV
     var htmlEnding : String = String()
     var newLine : String = String()
     
-    
     func change(num: Double) -> String
     
     {
@@ -95,25 +94,25 @@ class SWP_DetailsViewController: UIViewController, UITableViewDelegate, UITableV
         
         if (number < 1000)
         {
-        stringFormate = String(Int(number))
+            stringFormate = String(Int(number))
         }
         if ( number >= 1000.000 && number < 100000.000)
         {
             number = number / 1000.000
             number = round(number * 100) / 100
-           stringFormate = String(number) + " K"
+            stringFormate = String(number) + " K"
         }
         else if( number >= 100000.000 && number < 100000000.00)
         {
             number = number / 100000.000
             number = round(number * 100) / 100
-           stringFormate =  String(number) + " L"
+            stringFormate =  String(number) + " L"
         }
         else if( number >= 100000000.000)
         {
             number = number / 10000000.000
             number = round(number * 100) / 100
-           stringFormate = String(number) + " Cr"
+            stringFormate = String(number) + " Cr"
         }
         return stringFormate
     }
@@ -124,7 +123,6 @@ class SWP_DetailsViewController: UIViewController, UITableViewDelegate, UITableV
         year_cell = Int(Year) * 12
         cell_count = 0
         main_view_height.constant -= 50
-        
         
         html = "<!DOCTYPE html> <html> <head> <title>Table with Rounded Corners</title> <style> body {font-family: sans-serif; } h1 {color: rgb(160, 113, 116); text-align: center; } h4{text-align: center; } #table1 {border: 1px solid black; text-align: left; border-radius: 10px; width: 350px; } #table2 {border: 1px solid black; border-radius: 10px; width: 700px; } td {border: 1px solid black; text-align: left; padding: 5px; } .o {width: 50%; height: 5px; } .t {width: 25%; text-align: center; } #o-o {border-radius: 8px 0 0 0; } #o-t {border-radius:0 8px 0 0; } #s-o {border-radius: 0 0 0 8px; } #s-t {border-radius:0 0 8px 0; } .color {background-color: rgb(190, 169, 160); } </style> </head> <body> <h1> SWP Details </h1>"
         
@@ -139,17 +137,15 @@ class SWP_DetailsViewController: UIViewController, UITableViewDelegate, UITableV
         row_S = "<tr>"
         row_E = "</tr>"
         
-        
         newLine = "<br>"
         
-       
+        
         for i in 0..<year_cell+1
         {
             month.append(i)
             print(month[i])
         }
         print(Count)
-      
         
         self.title = "Details"
         
@@ -165,7 +161,7 @@ class SWP_DetailsViewController: UIViewController, UITableViewDelegate, UITableV
         html += row_S + "<td class='o'>Exp. Return Rate(%)</td><td class='o'>\(RateOfReturn) %</td>" + row_E
         html += row_S + "<td class='o'>Tenure(Year)</td><td class='o'>\(Int(Year)) Years</td>" + row_E
         html += row_S + "<td class='o'>Final Balance</td><td class='o'>\(change(num: FinalBalance))</td>" + row_E
-             html += row_S + "<td  id = 's-o' class='o'>Total Withrawal </td><td id = 's-t' class='o'>\(change(num: totalWithdrawal))</td>" + row_E + table1_E + newLine + table2_S
+        html += row_S + "<td  id = 's-o' class='o'>Total Withrawal </td><td id = 's-t' class='o'>\(change(num: totalWithdrawal))</td>" + row_E + table1_E + newLine + table2_S
         
         Vertical_stack.layer.cornerRadius = 10
         Vertical_stack.layer.borderWidth = 1
@@ -175,13 +171,11 @@ class SWP_DetailsViewController: UIViewController, UITableViewDelegate, UITableV
         h_st6.layer.cornerRadius = 10
         h_st6.layer.maskedCorners=[.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
         
-        
         h1s1.layer.borderWidth = 0.5 // 1 side
         h1s1.layer.cornerRadius = 10
         h1s1.layoutMargins = UIEdgeInsets(top:margin_top , left: margin_left, bottom:margin_bottom , right:margin_right )
         h1s1.isLayoutMarginsRelativeArrangement = true
         h1s1.layer.maskedCorners = [.layerMinXMinYCorner]
-        
         
         h2s1.layer.borderWidth = 0.5
         h2s1.layoutMargins = UIEdgeInsets(top: margin_top, left: margin_left, bottom: margin_bottom, right: margin_right)
@@ -204,7 +198,6 @@ class SWP_DetailsViewController: UIViewController, UITableViewDelegate, UITableV
         h6s1.layer.maskedCorners = [.layerMinXMaxYCorner]
         h6s1.layoutMargins = UIEdgeInsets(top: margin_top, left: margin_left , bottom: margin_bottom, right: margin_right)
         h6s1.isLayoutMarginsRelativeArrangement = true
-        
         
         h1s2.layer.cornerRadius = 10
         h1s2.layer.borderWidth = 0.5 // 2 side
@@ -248,17 +241,16 @@ class SWP_DetailsViewController: UIViewController, UITableViewDelegate, UITableV
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return month.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "swp_details", for: indexPath) as! SWP_DetailsTableViewCell
-           
+        
         if (indexPath.row == 0)
         {
             html += row_S + "<td id = 'o-o' class='color t'>Month</td><td class='color t'>Withdrawal Amount</td><td class='color t'>Return</td><td id = 'o-t' class='color t'>Month End Balance</td>" + row_E
-            
             
             cell.Month.text = "Month"
             cell.Withdrawal_Amount.text = "Withdrawal Amount"
@@ -306,7 +298,7 @@ class SWP_DetailsViewController: UIViewController, UITableViewDelegate, UITableV
                 
                 print(returns,"----",restAmount,"----",saveEstimatedResult)
                 
-                cell.Withdrawal_Amount.text = change(num: withdrawalAmount) 
+                cell.Withdrawal_Amount.text = change(num: withdrawalAmount)
                 cell.Month.text = String(indexPath.row)
                 cell.Month_End.text = formate(num: restAmount)
                 cell.Returns.text = change(num: returns)
@@ -354,7 +346,7 @@ class SWP_DetailsViewController: UIViewController, UITableViewDelegate, UITableV
                 cell.Month.text = String(Int(indexPath.row))
                 cell.Withdrawal_Amount.text = change(num: withdrawalAmount)
                 
-                html += row_S + "<td id = 's-o' class='t'>\(Int(indexPath.row))</td><td class='t'>\(change(num: withdrawalAmount))</td><td class='t'>\(change(num: returns))</td><td id = 's-t' class='t'>\(formate(num: totalInvestedAmount))</td>" + row_E 
+                html += row_S + "<td id = 's-o' class='t'>\(Int(indexPath.row))</td><td class='t'>\(change(num: withdrawalAmount))</td><td class='t'>\(change(num: returns))</td><td id = 's-t' class='t'>\(formate(num: totalInvestedAmount))</td>" + row_E
                 print(html)
                 
             }
@@ -433,7 +425,7 @@ class SWP_DetailsViewController: UIViewController, UITableViewDelegate, UITableV
         // 5. Save PDF file
         
         guard let outputURL = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("Result").appendingPathExtension("pdf")
-            else { fatalError("Destination URL not created") }
+        else { fatalError("Destination URL not created") }
         
         pdfData.write(to: outputURL, atomically: true)
         print("open \(outputURL.path)")
@@ -450,14 +442,14 @@ class SWP_DetailsViewController: UIViewController, UITableViewDelegate, UITableV
                 }
             }
             present(activityViewController, animated: true, completion: nil)
-
+            
         }
         else {
             print("document was not found")
         }
         
     }
-
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard (textField.text?.count ?? 0)>0 else{ return }
         html = textField.text ?? ""

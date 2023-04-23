@@ -48,14 +48,14 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
     var TotalInvestedAmountPercentage : Double = Double()
     var maxLength : Int = 0
     static func getCurrentDate() -> String {
-
-           let dateFormatter = DateFormatter()
-           dateFormatter.dateFormat = "dd/MM/yyyy"
-           return dateFormatter.string(from: Date())
-       }
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        return dateFormatter.string(from: Date())
+    }
     
-   
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,17 +121,12 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
             Description_view.isHidden = false
             Scroll_view.isScrollEnabled = true
             Details_button.isHidden = false
-
             
             value_Graph_View.layer.cornerRadius = 20
-            //            value_Graph_View.layer.maskedCorners=[.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
             data_Input_View.layer.cornerRadius = 20
-            
             Description_view.layer.cornerRadius = 20
-//            Description_view.layer.maskedCorners=[.layerMinXMinYCorner,.layerMaxXMinYCorner]
-            //input
-            MonthlyAmount = Double(Monthly_Amount.text ?? "0.0") ?? 0.0
             
+            MonthlyAmount = Double(Monthly_Amount.text ?? "0.0") ?? 0.0
             RateOfReturn = Double(Rate_Of_Return.text ?? "0.0") ?? 0.0
             Year = Double(Tenure.text ?? "0") ?? 0
             if RateOfReturn > 50 {
@@ -148,7 +143,6 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
             {
                 
                 SKStoreReviewController.requestReview()
-
                 rate  = (RateOfReturn/1200)
                 // calculation
                 TotalInvestAmount = MonthlyAmount * 12 * Year
@@ -173,8 +167,6 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
                     Scroll_view.isScrollEnabled = false
                     Details_button.isHidden = true
                     Main_View_Color.backgroundColor = .white
-                    
-                    
                 }
                 else
                 {
@@ -214,14 +206,14 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
         self.playNotificationSound()
         UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
             self.notification.alpha = 1.0
-                    }, completion: {
-                        (finished: Bool) -> Void in
-                    //Once the label is completely invisible, set the text and fade it back in
-                    // Fade in
-                        UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
-                            self.notification.alpha = 0.0
-                        }, completion: nil)
-            })
+        }, completion: {
+            (finished: Bool) -> Void in
+            //Once the label is completely invisible, set the text and fade it back in
+            // Fade in
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+                self.notification.alpha = 0.0
+            }, completion: nil)
+        })
         
         let h : History = History()
         h.toolId = 1
@@ -247,7 +239,7 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
     @IBAction func clear(_ sender: Any) {
         value_Graph_View.isHidden = true
         Description_view.isHidden = true
-//        Scroll_view.isScrollEnabled = false
+        //        Scroll_view.isScrollEnabled = false
         Details_button.isHidden = true
         Main_View_Color.backgroundColor = .white
         Monthly_Amount.text = ""
@@ -313,7 +305,7 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
         self.present(share, animated: true,completion: nil)
     }
     @IBAction func Historys(_ sender: UIBarButtonItem) {
-//        History_ViewController
+        //        History_ViewController
         
         let Historys : History_ViewController = storyboard?.instantiateViewController(withIdentifier: "History_ViewController") as! History_ViewController
         self.navigationController?.pushViewController(Historys, animated: true)
@@ -321,3 +313,4 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
     }
     
 }
+

@@ -31,19 +31,19 @@ class HttpWrapper: NSObject {
         }
         NSLog("Request info url: %@ --: %@",url,dicsParams);
         let parametetr :HTTPHeaders = ["Content-Type":"application/json"]
-      
+        
         AF.request(url, method: .get, parameters: nil, encoding:
-            URLEncoding.httpBody, headers: parametetr)
+                    URLEncoding.httpBody, headers: parametetr)
         
         .responseString { response in
             
             switch response.result {
                 
             case .success(let value):
-                    if (self.delegate != nil){
-                        
-                        self.delegate.HttpWrapperfetchDataSuccessWithString?(self, dicsResponse: value, statusCode: response.response?.statusCode ?? 0 )
-                    }
+                if (self.delegate != nil){
+                
+                    self.delegate.HttpWrapperfetchDataSuccessWithString?(self, dicsResponse: value, statusCode: response.response?.statusCode ?? 0 )
+                }
             case .failure(let error):
                 print("Sucees But Error: \(error)")
                 
@@ -53,6 +53,6 @@ class HttpWrapper: NSObject {
         }
     }
     
-   
+    
     
 }

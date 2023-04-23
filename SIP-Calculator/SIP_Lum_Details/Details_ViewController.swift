@@ -15,7 +15,6 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
     var year_for_sipp : [Int] = []
     // INPUT
     var MonthlyAmount : Double = Double(); //for SIP
-    
     var TotalAmount : Double = Double(); // for Lumpsum
     // Common
     var RateOfReturn :  Double = Double();
@@ -25,7 +24,6 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
     var ExpectedReturn : Double = Double();
     var TotalValue : Double = Double();
     var ExpectedAmount : Double = Double()
-    
     // FOR HTML PREVIEW
     var html :  String  = String()
     var table1_S : String = String()
@@ -40,8 +38,6 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
     var newLine : String = String()
     
     @IBOutlet weak var webView: WKWebView!
-    
- 
     @IBOutlet weak var Monthly_Amount: UILabel!
     @IBOutlet weak var Rate_Of_Return: UILabel!
     @IBOutlet weak var Total_Value: UILabel!
@@ -49,8 +45,6 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
     @IBOutlet weak var Total_Invested_Amount: UILabel!
     @IBOutlet weak var Year: UILabel!
     @IBOutlet weak var vertical_Stack: UIStackView!
-    
-    
     @IBOutlet weak var h_st1: UIStackView!
     @IBOutlet weak var h_st2: UIStackView!
     @IBOutlet weak var h_st3: UIStackView!
@@ -58,14 +52,12 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
     @IBOutlet weak var h_st5: UIStackView!
     @IBOutlet weak var h_st6: UIStackView!
     
-    
     @IBOutlet weak var h1s1: UIStackView!
     @IBOutlet weak var h2s1: UIStackView!
     @IBOutlet weak var h3s1: UIStackView!
     @IBOutlet weak var h4s1: UIStackView!
     @IBOutlet weak var h5s1: UIStackView!
     @IBOutlet weak var h6s1: UIStackView!
-    
     
     @IBOutlet weak var h1s2: UIStackView!
     @IBOutlet weak var h2s2: UIStackView!
@@ -126,7 +118,6 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         html = "<!DOCTYPE html> <html> <head> <title>Table with Rounded Corners</title> <style> body {font-family: sans-serif; } h1 {color: rgb(160, 113, 116); text-align: center; } h4{text-align: center; } #table1 {border: 1px solid black; text-align: left; border-radius: 10px; width: 350px; } #table2 {border: 1px solid black; text-align: left; border-radius: 10px; width: 600px; } td {border: 1px solid black; text-align: left; padding: 5px; } .o {width: 50%; } .t {width: 33.3333%; text-align: center; } #o-o {border-radius: 8px 0 0 0; } #o-t {border-radius:0 8px 0 0; } #s-o {border-radius: 0 0 0 8px; } #s-t {border-radius:0 0 8px 0; } .color {background-color: rgb(190, 169, 160); } </style> </head> <body>"
         htmlEnding = "<h4>hello</h4></body></html>"
         table1_S = "<table cellspacing='0' align='center' id = 'table1'>"
@@ -138,7 +129,6 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
         row_S = "<tr>"
         row_E = "</tr>"
         newLine = "<br>"
-        
         
         yearCalculate = Int(Tenure)
         
@@ -190,7 +180,6 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
             Rate_Of_Return.text = String(RateOfReturn) + " %"
             Year.text = String(Int(Tenure)) + " Years"
             
-            
         }
         if fromScreen == "SIP_Planner"
         {
@@ -228,7 +217,6 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
         h1s1.isLayoutMarginsRelativeArrangement = true
         h1s1.layer.maskedCorners = [.layerMinXMinYCorner]
         
-        
         h2s1.layer.borderWidth = 0.5
         h2s1.layoutMargins = UIEdgeInsets(top: margin_top, left: margin_left, bottom: margin_bottom, right: margin_right)
         h2s1.isLayoutMarginsRelativeArrangement = true
@@ -250,7 +238,6 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
         h6s1.layer.maskedCorners = [.layerMinXMaxYCorner]
         h6s1.layoutMargins = UIEdgeInsets(top: margin_top, left: margin_left , bottom: margin_bottom, right: margin_right)
         h6s1.isLayoutMarginsRelativeArrangement = true
-        
         
         h1s2.layer.cornerRadius = 10
         h1s2.layer.borderWidth = 0.5 // 2 side
@@ -279,8 +266,6 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
         h6s2.layer.maskedCorners = [.layerMaxXMaxYCorner]
         h6s2.layoutMargins = UIEdgeInsets(top: margin_top, left: margin_left , bottom: margin_bottom, right: margin_right)
         h6s2.isLayoutMarginsRelativeArrangement = true
-        
-        //        SECOND TABLE
         
         html += table2_S
         
@@ -454,7 +439,7 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
         // 5. Save PDF file
         
         guard let outputURL = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("Result").appendingPathExtension("pdf")
-            else { fatalError("Destination URL not created") }
+        else { fatalError("Destination URL not created") }
         
         pdfData.write(to: outputURL, atomically: true)
         print("open \(outputURL.path)")
@@ -471,14 +456,14 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
                 }
             }
             present(activityViewController, animated: true, completion: nil)
-
+            
         }
         else {
             print("document was not found")
         }
         
     }
-
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard (textField.text?.count ?? 0)>0 else{ return }
         html = textField.text ?? ""

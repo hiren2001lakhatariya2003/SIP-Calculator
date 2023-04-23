@@ -12,7 +12,6 @@ class Setting_TableViewCell: UITableViewCell {
     
     @IBOutlet weak var Menu: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

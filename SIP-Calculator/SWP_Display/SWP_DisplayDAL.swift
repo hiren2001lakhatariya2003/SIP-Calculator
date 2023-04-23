@@ -29,7 +29,7 @@ class SWP_DisplayDal: NSObject {
                     Status = false
                 }
             }
-           
+            
         }
         else
         {

@@ -20,9 +20,7 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @IBOutlet weak var history_Table: UITableView!
     @IBOutlet weak var Display_Empty_trash: UIView!
-    
     @IBOutlet weak var GIF: UIImageView!
-    
     @IBOutlet var Main_View_Colour: UIView!
     
     func change(num: Double) -> String
@@ -42,25 +40,25 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         if (number < 1000)
         {
-        stringFormate = String(Int(number))
+            stringFormate = String(Int(number))
         }
         if ( number >= 1000.00 && number < 100000.00)
         {
             number = number / 1000.00
             number = round(number * 100) / 100
-           stringFormate = String(number) + " K"
+            stringFormate = String(number) + " K"
         }
         else if( number >= 100000.00 && number < 10000000.00)
         {
             number = number / 100000.00
             number = round(number * 100) / 100
-           stringFormate =  String(number) + " L"
+            stringFormate =  String(number) + " L"
         }
         else if( number >= 10000000.00)
         {
             number = number / 10000000.00
             number = round(number * 100) / 100
-           stringFormate = String(number) + " Cr"
+            stringFormate = String(number) + " Cr"
         }
         return stringFormate
     }
@@ -68,7 +66,7 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         self.Main_View_Colour.backgroundColor = UIColor(red: (216/255), green: (247/255), blue: (255/255), alpha: 1)
     }
     
@@ -95,6 +93,7 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
         }
     }
     
+    
     override func viewDidDisappear(_ animated: Bool) {
         GIF.stopAnimating()
     }
@@ -113,19 +112,9 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
     }
     
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "History" , for: indexPath) as! History_TableViewCell;
         
-//        cell.alpha = 0
-//
-//        UIView.animate(
-//            withDuration: 0.01,
-//            delay: 0.03 * Double(indexPath.row),
-//            animations: {
-//                cell.alpha = 1
-//        })
         cell.Display_History_view.layer.cornerRadius = 20
         cell.Lumpsum_View.layer.cornerRadius = 20
         cell.SWP_View.layer.cornerRadius = 20
@@ -152,23 +141,15 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
         cell.SWP_View.isHidden = true
         cell.SIPP_View.isHidden = true
         
-        
-        
-        
         if(h.toolId == 1)
         {
             cell.SIP_View.isHidden = false
-            
-            
             cell.Expected_Return.text = String(h.SIP_RateOfReturn) + " %"
             cell.Tenure.text = String(Int(h.SIP_Year)) + " Years"
             cell.Monthly_Amount.text = change(num: h.SIP_MonthlyAmount)
             cell.Total_Value.text = formate(num: h.SIP_TotalValue)
-            
             cell.Invested_Amount.text = formate(num:  h.SIP_TotalInvestAmount)
-            //               cell.Title.text =  h.toolName
             cell.SIP_Date.text = h.SIP_Date
-           
             cell.delete.tag = indexPath.row
             cell.delete.addTarget(self, action: #selector(Delete_Individual(sender:)), for: .touchUpInside)
         }
@@ -179,14 +160,9 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell.LExpected_Return.text = String(h.Lumpsum_RateOfReturn)  + " %"
             cell.LTenure.text = String(Int(h.Lumpsum_Year))  + " Years"
             cell.LTotal_Value.text = formate(num: h.Lumpsum_TotalValue)
-//            cell.LEstimated_Return.text = formate(num: h.Lumpsum_ExpectedReturn)
             cell.LTotal_Investment.text = formate(num: h.Lumpsum_TotalInvestment)
             cell.Lumpsum_Date.text = h.Lumpsum_Date
-            
-            
-            
             cell.Lumpsum_delete.tag = indexPath.row
-            
             cell.Lumpsum_delete.addTarget(self, action: #selector(Delete_Individual(sender:)), for: .touchUpInside)
         }
         else if(h.toolId == 2)
@@ -199,10 +175,8 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell.SWP_Tenure.text = String(Int(h.SWP_Year)) + " Years"
             cell.Total_Withdrawal.text = formate(num: h.SWP_TotalWithdrawals)
             cell.Final_Balance.text = formate(num: h.SWP_FinalBalance)
-//            cell.SWP_Estimated_Return.text = formate(num: h.SWP_ExpectedReturn)
             cell.SWP_Date.text = h.SWP_Date
             cell.SWP_Delete.tag = indexPath.row
-            
             cell.SWP_Delete.addTarget(self, action: #selector(Delete_Individual(sender:)), for: .touchUpInside)
             
         }
@@ -213,7 +187,6 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell.SIPP_Rate_Of_Return.text = String(h.SIPP_RateOfReturn) + " %"
             cell.SIPP_Tenure.text = String(Int(h.SIPP_Year)) + " Years"
             cell.SIPP_Invested_Amount.text = formate(num: h.SIPP_InvestedAmount)
-//            cell.SIPP_Estimated_Return.text = formate(num: h.SIPP_EstimatedReturn)
             cell.SIPP_Monthly_Amount.text = formate(num: h.SIPP_MonthlyAmount)
             cell.SIP_PLANNER_DATE.text = h.SIPP_Date
             cell.SIPP_Delete.tag = indexPath.row
@@ -224,7 +197,7 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
     }
     
-   
+    
     
     @IBAction func Delete_All(_ sender: Any) {
         let alert = UIAlertController(title: "Clear \"History\"?", message:"clear all the history.", preferredStyle: .alert)
@@ -283,9 +256,9 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
             }
             
         }
-            Delete.setValue(UIColor.red, forKey: "titleTextColor")
-            alert.addAction(Cancle)
-            alert.addAction(Delete)
+        Delete.setValue(UIColor.red, forKey: "titleTextColor")
+        alert.addAction(Cancle)
+        alert.addAction(Delete)
         self.present(alert, animated: true, completion: nil)
         
         
@@ -331,11 +304,9 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
             dvc.TotalAmount = h.Lumpsum_TotalInvestment
             dvc.RateOfReturn = h.Lumpsum_RateOfReturn
             dvc.Tenure = h.Lumpsum_Year
-            
             dvc.TotalInvestAmount = h.Lumpsum_InvestedAmount
             dvc.ExpectedReturn = h.Lumpsum_ExpectedReturn
             dvc.TotalValue = h.Lumpsum_TotalValue
-            
             dvc.fromScreen = "Lumpsum"
             self.navigationController?.pushViewController(dvc, animated: true)
         }
@@ -349,7 +320,6 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
             dvc.MonthlyAmount = h.SIPP_MonthlyAmount
             dvc.ExpectedReturn = h.SIPP_EstimatedReturn
             dvc.TotalInvestAmount = h.SIPP_InvestedAmount
-            
             dvc.fromScreen = "SIP_Planner"
             
             self.navigationController?.pushViewController(dvc, animated: true)

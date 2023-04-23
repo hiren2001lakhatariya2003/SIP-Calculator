@@ -15,7 +15,6 @@ class DeveloperViewController: UIViewController , MFMailComposeViewControllerDel
     @IBOutlet weak var imgApp: UIImageView!
     @IBOutlet weak var lblAppTitle: UILabel!
     @IBOutlet weak var lblASWDCDes: UILabel!
-    
     @IBOutlet weak var meetourteamview: UIView!
     @IBOutlet weak var shareview: UIView!
     @IBOutlet weak var contactusview: UIView!
@@ -47,12 +46,10 @@ class DeveloperViewController: UIViewController , MFMailComposeViewControllerDel
         if #available(iOS 13.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.backgroundColor = .white
-           navigationController?.navigationBar.scrollEdgeAppearance = appearance
+            navigationController?.navigationBar.scrollEdgeAppearance = appearance
         } else {
             // Fallback on earlier versions
         }
-      
-        
         
         let nsObject: AnyObject? = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as AnyObject?
         let version = nsObject as! String
@@ -62,7 +59,7 @@ class DeveloperViewController: UIViewController , MFMailComposeViewControllerDel
         paragraphStyle.alignment = .justified
         paragraphStyle.firstLineHeadIndent = 0.001
         
-	    let attrStr = try! NSAttributedString(data: htmlString.data(using: String.Encoding.utf8)!, options: [.documentType: NSAttributedString.DocumentType.html] , documentAttributes: nil)
+        let attrStr = try! NSAttributedString(data: htmlString.data(using: String.Encoding.utf8)!, options: [.documentType: NSAttributedString.DocumentType.html] , documentAttributes: nil)
         meetourteam.layer.cornerRadius = 5
         meetourteam.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
         meetourteamview.layer.cornerRadius = 5
@@ -76,67 +73,43 @@ class DeveloperViewController: UIViewController , MFMailComposeViewControllerDel
         contactusview.layer.cornerRadius = 5
         contactusview.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
         shareview.layer.cornerRadius = 5
-        
-        
         lblASWDCDes.attributedText = attrStr
-//        lblcontactemail.font = UIFont(name: "fontawesome", size: 13)
-//        lblcontactemail.text = "\u{f0e0}"
         lblContactwebsite.font = UIFont(name: "fontawesome", size: 13)
         lblContactwebsite.text = "\u{f0ac}"
-//        lblContactNumber.font = UIFont(name: "fontawesome", size: 13)
-//        lblContactNumber.text = "\u{f095}"
-//        lblshare.font = UIFont(name: "fontawesome", size: 13)
-//         lblshare.text = "\u{f1e0}"
-//        lblrate.font = UIFont(name: "fontawesome", size: 13)
-//        lblrate.text = "\u{f006}"
-//        lblmore.font = UIFont(name: "fontawesome", size: 13)
-//        lblmore.text = "\u{f179}"
-//        lbllike.font = UIFont(name: "fontawesome", size: 13)
-//        lbllike.text = "\u{f164}"
-//        lblcheck.font = UIFont(name: "fontawesome", size: 13)
-//        lblcheck.text = "\u{f021}"
+        
         let formatter : DateFormatter =  DateFormatter()
         formatter.dateFormat = "yyyy"
         let yearString = formatter.string(from: Date())
         lblYear.text = "© \(yearString) Darshan Institute of Engineering & Technology"
         
-        //        let paragraphStyle = NSMutableParagraphStyle()
-        //        paragraphStyle.alignment = .Justified
-        //        paragraphStyle.firstLineHeadIndent = 0.001
-        //
-        //        let mutableAttrStr = NSMutableAttributedString(attributedString: lbldes.attributedText!)
-        //        mutableAttrStr.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, mutableAttrStr.length))
-        //
-        //        lbldes.attributedText = mutableAttrStr
-        
     }
     
-        @IBAction func actionContacEmail(sender: AnyObject) {
-            if MFMailComposeViewController.canSendMail() {
-                let mail = MFMailComposeViewController()
-                mail.mailComposeDelegate = self
-                mail.setToRecipients(["aswdc@darshan.ac.in"])
-                present(mail, animated: true, completion: nil)
-            }
-            else
-            {
-                let alert = UIAlertController(title: "Alert", message: " There are no email accounts set up on the device.", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-            }
+    @IBAction func actionContacEmail(sender: AnyObject) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["aswdc@darshan.ac.in"])
+            present(mail, animated: true, completion: nil)
         }
+        else
+        {
+            let alert = UIAlertController(title: "Alert", message: " There are no email accounts set up on the device.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     //
-        @IBAction func actionContactwebsite(sender: AnyObject) {
-//            UIApplication.shared.openURL(NSURL(string:"http://www.darshan.ac.in")! as URL)
-            let myUrl = "http://www.darshan.ac.in"
-            if let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty{
-                UIApplication.shared.open(url,options: [:],completionHandler: nil)
-            }
-            guard let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty else {
-                return
-            }
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    @IBAction func actionContactwebsite(sender: AnyObject) {
+        //            UIApplication.shared.openURL(NSURL(string:"http://www.darshan.ac.in")! as URL)
+        let myUrl = "http://www.darshan.ac.in"
+        if let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty{
+            UIApplication.shared.open(url,options: [:],completionHandler: nil)
         }
+        guard let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty else {
+            return
+        }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
     
     
     @IBAction func actionshare(_ sender: AnyObject) {
@@ -147,7 +120,7 @@ class DeveloperViewController: UIViewController , MFMailComposeViewControllerDel
     }
     @IBAction func actionRate(_ sender: AnyObject)
     {
-//        UIApplication.shared.openURL(URL(string:"http://tiny.cc/ispeed")!)
+        //        UIApplication.shared.openURL(URL(string:"http://tiny.cc/ispeed")!)
         let myUrl = "http://tiny.cc/ispeed"
         if let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty{
             UIApplication.shared.open(url,options: [:],completionHandler: nil)
@@ -159,7 +132,7 @@ class DeveloperViewController: UIViewController , MFMailComposeViewControllerDel
     }
     
     @IBAction func actionmore(_ sender: AnyObject) {
-       
+        
         let myUrl = "https://itunes.apple.com/in/developer/g-sanghani/id772995906"
         if let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty{
             UIApplication.shared.open(url,options: [:],completionHandler: nil)
@@ -183,7 +156,7 @@ class DeveloperViewController: UIViewController , MFMailComposeViewControllerDel
     }
     
     @IBAction func actionCheck(_ sender: AnyObject) {
-       
+        
         let myUrl = "http://tiny.cc/ispeed"
         if let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty{
             UIApplication.shared.open(url,options: [:],completionHandler: nil)

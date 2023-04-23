@@ -10,7 +10,6 @@ import UIKit
 class SIP_Planner: NSObject {
     class func Add_Cal (h:History)-> Bool
     {
-        
         var Status : Bool = Bool()
         let dbConn = FMDatabase(path: Utility.getPath(Utility.dbName))
         

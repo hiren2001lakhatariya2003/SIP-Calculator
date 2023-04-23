@@ -47,8 +47,6 @@ class SWP_DisplayViewController: UIViewController,ChartViewDelegate, UITextField
     var rowCount = 0
     var player : AVAudioPlayer!
     var maxLength : Int = 0
-//    var FinalBalance = 0
-//    var finalEstimatedReturn = 0
     
     func change(num: Double) -> String
     {
@@ -62,15 +60,14 @@ class SWP_DisplayViewController: UIViewController,ChartViewDelegate, UITextField
     }
     
     static func getCurrentDate() -> String {
-
-           let dateFormatter = DateFormatter()
-
-           dateFormatter.dateFormat = "dd/MM/yyyy"
-
-           return dateFormatter.string(from: Date())
-
-       }
-    
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        
+        return dateFormatter.string(from: Date())
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -132,7 +129,7 @@ class SWP_DisplayViewController: UIViewController,ChartViewDelegate, UITextField
             Calculation_View.layer.cornerRadius = 20
             
             Description_View.layer.cornerRadius = 20
-//            Description_View.layer.maskedCorners=[.layerMinXMinYCorner,.layerMaxXMinYCorner]
+            //            Description_View.layer.maskedCorners=[.layerMinXMinYCorner,.layerMaxXMinYCorner]
             
             totalInvestedAmount = Double(Total_Invested_Amount.text ?? "0.0") ?? 0.0
             Display_TotalInvested = totalInvestedAmount
@@ -260,7 +257,7 @@ class SWP_DisplayViewController: UIViewController,ChartViewDelegate, UITextField
             Withdrawal_Amount.resignFirstResponder()
             Rate_Of_Return.resignFirstResponder()
             Tenure.resignFirstResponder()
-           
+            
         }
     }
     
@@ -268,14 +265,14 @@ class SWP_DisplayViewController: UIViewController,ChartViewDelegate, UITextField
         self.playNotificationSound()
         UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
             self.notification.alpha = 1.0
-                    }, completion: {
-                        (finished: Bool) -> Void in
-                    //Once the label is completely invisible, set the text and fade it back in
-                    // Fade in
-                        UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
-                            self.notification.alpha = 0.0
-                        }, completion: nil)
-            })
+        }, completion: {
+            (finished: Bool) -> Void in
+            //Once the label is completely invisible, set the text and fade it back in
+            // Fade in
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+                self.notification.alpha = 0.0
+            }, completion: nil)
+        })
         
         let h : History = History()
         h.toolId = 3
@@ -299,7 +296,7 @@ class SWP_DisplayViewController: UIViewController,ChartViewDelegate, UITextField
         Reesult_Display_view.isHidden = true
         Description_View.isHidden = true
         Details_Button.isHidden = true
-//        scroll_view.isScrollEnabled = false
+        //        scroll_view.isScrollEnabled = false
         main_view.backgroundColor = .white
         Total_Invested_Amount.text = ""
         Withdrawal_Amount.text = ""
@@ -339,7 +336,6 @@ class SWP_DisplayViewController: UIViewController,ChartViewDelegate, UITextField
     }
     
     @IBAction func Historys(_ sender: UIBarButtonItem) {
-//        History_ViewController
         
         let Historys : History_ViewController = storyboard?.instantiateViewController(withIdentifier: "History_ViewController") as! History_ViewController
         self.navigationController?.pushViewController(Historys, animated: true)
