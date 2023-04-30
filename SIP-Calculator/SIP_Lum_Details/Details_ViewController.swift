@@ -461,7 +461,6 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
         else {
             print("document was not found")
         }
-        
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

@@ -79,6 +79,13 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
         
     }
     
+//    override func viewWillDisappear(_ animated: Bool) {
+//        SKStoreReviewController.requestReview()
+//    }
+    
+    
+
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         if textField == Monthly_Amount{
@@ -142,7 +149,7 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
             else
             {
                 
-                SKStoreReviewController.requestReview()
+                
                 rate  = (RateOfReturn/1200)
                 // calculation
                 TotalInvestAmount = MonthlyAmount * 12 * Year

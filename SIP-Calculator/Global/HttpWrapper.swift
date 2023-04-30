@@ -32,7 +32,7 @@ class HttpWrapper: NSObject {
         NSLog("Request info url: %@ --: %@",url,dicsParams);
         let parametetr :HTTPHeaders = ["Content-Type":"application/json"]
         
-        AF.request(url, method: .get, parameters: nil, encoding:
+        AF.request(url, method: .post, parameters: nil, encoding:
                     URLEncoding.httpBody, headers: parametetr)
         
         .responseString { response in

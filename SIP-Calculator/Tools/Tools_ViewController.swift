@@ -125,13 +125,26 @@ class Tools_ViewController: UIViewController ,UITableViewDelegate, UITableViewDa
                 let SIP_Planner : SIP_PlannerViewController = storyboard?.instantiateViewController(withIdentifier: "SIP_PlannerViewController") as! SIP_PlannerViewController
                 self.navigationController?.pushViewController(SIP_Planner, animated: true)
             }
+            
+            tableview.isUserInteractionEnabled = true
+            historybuttons.isEnabled = true
+            tableView.deselectRow(at: indexPath, animated: true)
+            UIView.animate(withDuration: 0.4, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
+                self.Setting_view.alpha = 0.0
+                
+            })
         }
         
         else
         {   if indexPath.row == 1
             {
+           
             let Feedback : FeedBackViewController = storyboard?.instantiateViewController(withIdentifier: "FeedBackViewController") as! FeedBackViewController
+            
+    
+//            navigationController?.present(navController, animated: true, completion: nil)
             self.navigationController?.pushViewController(Feedback, animated: true)
+            
         }
             
             if indexPath.row == 2
@@ -164,13 +177,7 @@ class Tools_ViewController: UIViewController ,UITableViewDelegate, UITableViewDa
                     //
                 }
             }
-            tableview.isUserInteractionEnabled = true
-            historybuttons.isEnabled = true
-            tableView.deselectRow(at: indexPath, animated: true)
-            UIView.animate(withDuration: 0.4, delay: 0.0, options: UIView.AnimationOptions.curveEaseOut, animations: {
-                self.Setting_view.alpha = 0.0
-                
-            })
+            
         }
         
     }

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3FD152AC284F60858A84F7B5 /* Pods_SIP_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705592C5D213D23D7BA7B6AD /* Pods_SIP_Calculator.framework */; };
 		76065C9F7BA9A8A5EBC63EF3 /* Pods_SIP_Calculator_SIP_CalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFD20C2F4AF3DA5B5EE8C98 /* Pods_SIP_Calculator_SIP_CalculatorUITests.framework */; };
-		9A18AB8929F2B4F000EF5D36 /* HttpWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A18AB8729F2B4F000EF5D36 /* HttpWrapper.swift */; };
 		9A18AB8A29F2B4F000EF5D36 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A18AB8829F2B4F000EF5D36 /* GlobalData.swift */; };
 		9A1AE1CA29F269B80041B50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1C929F269B80041B50D /* AppDelegate.swift */; };
 		9A1AE1CC29F269B80041B50D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1CB29F269B80041B50D /* SceneDelegate.swift */; };
@@ -18,6 +17,7 @@
 		9A1AE1E129F269B90041B50D /* SIP_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1E029F269B90041B50D /* SIP_CalculatorTests.swift */; };
 		9A1AE1EB29F269B90041B50D /* SIP_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1EA29F269B90041B50D /* SIP_CalculatorUITests.swift */; };
 		9A1AE1ED29F269B90041B50D /* SIP_CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1EC29F269B90041B50D /* SIP_CalculatorUITestsLaunchTests.swift */; };
+		9A3101E029FCD63A000618F2 /* HttpWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3101DF29FCD63A000618F2 /* HttpWrapper.swift */; };
 		9A570F7C29F26B0700019448 /* SIP_PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F7A29F26B0700019448 /* SIP_PlannerViewController.swift */; };
 		9A570F7D29F26B0700019448 /* SIP_PlannerDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F7B29F26B0700019448 /* SIP_PlannerDAL.swift */; };
 		9A570F8129F26B2800019448 /* Lumpsum_DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F7F29F26B2800019448 /* Lumpsum_DisplayViewController.swift */; };
@@ -84,7 +84,6 @@
 		705592C5D213D23D7BA7B6AD /* Pods_SIP_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIP_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7462858EAFBFB5CF5101722D /* Pods-SIP-Calculator-SIP-CalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIP-Calculator-SIP-CalculatorUITests.release.xcconfig"; path = "Target Support Files/Pods-SIP-Calculator-SIP-CalculatorUITests/Pods-SIP-Calculator-SIP-CalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		850C8E9D3C14371691301EBC /* Pods-SIP-Calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIP-Calculator.debug.xcconfig"; path = "Target Support Files/Pods-SIP-Calculator/Pods-SIP-Calculator.debug.xcconfig"; sourceTree = "<group>"; };
-		9A18AB8729F2B4F000EF5D36 /* HttpWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpWrapper.swift; sourceTree = "<group>"; };
 		9A18AB8829F2B4F000EF5D36 /* GlobalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 		9A1AE1C629F269B80041B50D /* SIP-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SIP-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A1AE1C929F269B80041B50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		9A1AE1E629F269B90041B50D /* SIP-CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SIP-CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A1AE1EA29F269B90041B50D /* SIP_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIP_CalculatorUITests.swift; sourceTree = "<group>"; };
 		9A1AE1EC29F269B90041B50D /* SIP_CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIP_CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A3101DF29FCD63A000618F2 /* HttpWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpWrapper.swift; path = ../../../../Downloads/HttpWrapper.swift; sourceTree = "<group>"; };
 		9A570F7A29F26B0700019448 /* SIP_PlannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIP_PlannerViewController.swift; sourceTree = "<group>"; };
 		9A570F7B29F26B0700019448 /* SIP_PlannerDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIP_PlannerDAL.swift; sourceTree = "<group>"; };
 		9A570F7F29F26B2800019448 /* Lumpsum_DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lumpsum_DisplayViewController.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				9A18AB8829F2B4F000EF5D36 /* GlobalData.swift */,
-				9A18AB8729F2B4F000EF5D36 /* HttpWrapper.swift */,
+				9A3101DF29FCD63A000618F2 /* HttpWrapper.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -675,7 +675,6 @@
 				9A570FD229F2702600019448 /* GIFViewController.swift in Sources */,
 				9A570F9629F26BB700019448 /* History_ViewController.swift in Sources */,
 				9A570F8629F26B5800019448 /* Details_ViewController.swift in Sources */,
-				9A18AB8929F2B4F000EF5D36 /* HttpWrapper.swift in Sources */,
 				9A570FD629F2706B00019448 /* Setting_TableViewCell.swift in Sources */,
 				9A570F9429F26BB700019448 /* History_TableViewCell.swift in Sources */,
 				9A92D10229F3DDF1008271AA /* FeedBackViewController.swift in Sources */,
@@ -694,6 +693,7 @@
 				9A570F8D29F26BA000019448 /* SIP_DisplayDAL.swift in Sources */,
 				9A570F7D29F26B0700019448 /* SIP_PlannerDAL.swift in Sources */,
 				9A18AB8A29F2B4F000EF5D36 /* GlobalData.swift in Sources */,
+				9A3101E029FCD63A000618F2 /* HttpWrapper.swift in Sources */,
 				9A570FD129F2702600019448 /* GIF.swift in Sources */,
 				9A570FCC29F26E5300019448 /* Utility.swift in Sources */,
 				9A1AE1CC29F269B80041B50D /* SceneDelegate.swift in Sources */,
@@ -859,6 +859,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2BSGF4F3MA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SIP-Calculator/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -891,6 +892,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2BSGF4F3MA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SIP-Calculator/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
