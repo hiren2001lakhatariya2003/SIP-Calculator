@@ -7,7 +7,7 @@
 
 import UIKit
 import IQKeyboardManagerSwift
-
+import AVFoundation
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
@@ -16,8 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         Utility.copyFile()
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.ambient, mode: .default, options: [])
+            try AVAudioSession.sharedInstance().setActive(true, options: [])
+        } catch {
+            print(error)
+        }
         return true
     }
+    
     
     // MARK: UISceneSession Lifecycle
     

@@ -29,7 +29,7 @@ import SystemConfiguration
         
     }
 }
-@objc class FeedBackViewController: UIViewController ,HttpWrapperDelegate, UITextFieldDelegate {
+@objc class FeedBackViewController: UIViewController , UITextFieldDelegate {
     
     @IBOutlet weak var btnSend: UIButton!
     @IBOutlet weak var txtname: UITextField!
@@ -57,7 +57,7 @@ import SystemConfiguration
         self.txtmessage.layer.borderColor  = UIColor(red: 203/255, green: 183/255, blue: 176/255, alpha: 1.0).cgColor
         self.lblFeedback.layer.cornerRadius = 5;
         self.lblFeedback.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        
+        self.vwForm.layer.cornerRadius = 5
         txtcontact.delegate = self
         
     }

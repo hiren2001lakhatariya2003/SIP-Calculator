@@ -58,7 +58,7 @@ class Lumpsum_DisplayViewController: UIViewController, ChartViewDelegate , UITex
     
     static func getCurrentDate() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = "dd/MM/yyyy - hh:mm a"
         return dateFormatter.string(from: Date())
     }
     
@@ -213,7 +213,7 @@ class Lumpsum_DisplayViewController: UIViewController, ChartViewDelegate , UITex
     }
     func playNotificationSound()
     {
-        let url = Bundle.main.url(forResource: "notificationSound", withExtension: "mp3")
+        let url = Bundle.main.url(forResource: "notificationSound", withExtension: "caf")
         player = try! AVAudioPlayer(contentsOf: url!)
         player!.play()
         player!.volume = 0.8

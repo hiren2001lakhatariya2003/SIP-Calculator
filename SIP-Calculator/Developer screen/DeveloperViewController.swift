@@ -38,11 +38,13 @@ class DeveloperViewController: UIViewController , MFMailComposeViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        meetourteamview.layer.borderColor = UIColor(red: (203/256), green: (183/256), blue: (176/256), alpha: 1.0).cgColor
-        aboutview.layer.borderColor = UIColor(red: (203/256), green: (183/256), blue: (176/256), alpha: 1.0).cgColor
-        contactusview.layer.borderColor = UIColor(red: (203/256), green: (183/256), blue: (176/256), alpha: 1.0).cgColor
-        shareview.layer.borderColor = UIColor(red: (203/256), green: (183/256), blue: (176/256), alpha: 1.0).cgColor
+        meetourteamview.layer.borderColor  = UIColor(red: 203/255, green: 183/255, blue: 176/255, alpha: 1.0).cgColor
+        aboutview.layer.borderColor  = UIColor(red: 203/255, green: 183/255, blue: 176/255, alpha: 1.0).cgColor
+        contactusview.layer.borderColor  = UIColor(red: 203/255, green: 183/255, blue: 176/255, alpha: 1.0).cgColor
+        shareview.layer.borderColor  = UIColor(red: 203/255, green: 183/255, blue: 176/255, alpha: 1.0).cgColor
         imgApp.layer.borderWidth = 0.2
+        imgApp.layer.cornerRadius = 10
+        imgApp.clipsToBounds = true
         if #available(iOS 13.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.backgroundColor = .white
@@ -158,6 +160,19 @@ class DeveloperViewController: UIViewController , MFMailComposeViewControllerDel
     @IBAction func actionCheck(_ sender: AnyObject) {
         
         let myUrl = "http://tiny.cc/ispeed"
+        if let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty{
+            UIApplication.shared.open(url,options: [:],completionHandler: nil)
+        }
+        guard let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty else {
+            return
+        }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
+    
+    @IBAction func actionContact(_ sender: Any) {
+      
+        let myUrl = "telprompt://+919727747317"
         if let url = URL(string: "\(myUrl)"), !url.absoluteString.isEmpty{
             UIApplication.shared.open(url,options: [:],completionHandler: nil)
         }

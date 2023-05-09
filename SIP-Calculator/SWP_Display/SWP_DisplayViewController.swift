@@ -63,7 +63,7 @@ class SWP_DisplayViewController: UIViewController,ChartViewDelegate, UITextField
         
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = "dd/MM/yyyy - hh:mm a"
         
         return dateFormatter.string(from: Date())
         
@@ -343,7 +343,7 @@ class SWP_DisplayViewController: UIViewController,ChartViewDelegate, UITextField
     }
     func playNotificationSound()
     {
-        let url = Bundle.main.url(forResource: "notificationSound", withExtension: "mp3")
+        let url = Bundle.main.url(forResource: "notificationSound", withExtension: "caf")
         player = try! AVAudioPlayer(contentsOf: url!)
         player!.play()
         player!.volume = 0.8

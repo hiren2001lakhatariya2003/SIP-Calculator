@@ -10,7 +10,7 @@ import Foundation
 import WebKit
 
 class Details_ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegate, WKUIDelegate{
-    
+    var history : [History] = []
     var years : [Double] = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     var year_for_sipp : [Int] = []
     // INPUT
@@ -36,6 +36,7 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
     var table2_E : String = String()
     var htmlEnding : String = String()
     var newLine : String = String()
+    var inflaction : Double = Double()
     
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var Monthly_Amount: UILabel!
@@ -185,18 +186,30 @@ class Details_ViewController: UIViewController ,UITableViewDataSource,UITableVie
         {
             self.title = "Details"
             html += "<h1> SIP Planner Details </h1>"
+            
             html += table1_S + row_S + "<td id = 'o-o' class='o'>Monthly Amount</td><td  id = 'o-t'>\(change(num: MonthlyAmount))</td>" + row_E
             html += row_S + "<td class='o'>Exp. Return Rate(%)</td><td class='o'>\(RateOfReturn) %</td>" + row_E
             html += row_S + "<td class='o'>Tenure(Year)</td><td class='o'>\(Int(Tenure)) Years</td>" + row_E
             html += row_S + "<td class='o'>Invested Amount</td><td class='o'>\(change(num: TotalInvestAmount))</td>" + row_E
             html += row_S + "<td class='o'>Estimated Return</td><td class='o'>\(change(num: ExpectedReturn))</td>" + row_E
-            html += row_S + "<td  id = 's-o' class='o'>Total Value</td><td id = 's-t' class='o'>\(change(num: ExpectedAmount))</td>" + row_E + table1_E + newLine
+            if(inflaction != 0.0)
+            {
+                html += row_S + "<td  id = 's-o' class='o'>Total Value</td><td id = 's-t' class='o'>\(change(num: ExpectedAmount)) - with Inflation : \(inflaction) %</td>" + row_E + table1_E + newLine
+            }
+           
             
             Total_Invested_Amount.text = change(num: TotalInvestAmount)
             Rate_Of_Return.text = String(RateOfReturn) + " %"
             Year.text = String(Int(Tenure)) + " Years"
             Monthly_Amount.text = change(num: MonthlyAmount)
-            Total_Value.text = change(num: ExpectedAmount)
+            if(inflaction != 0.0)
+            {
+                Total_Value.text = change(num: ExpectedAmount) + " - with Inflation : \(inflaction) %"
+            }
+            else
+            {
+                Total_Value.text = change(num: ExpectedAmount)
+            }
             Expected_Return.text = change(num: ExpectedReturn)
             print(year_for_sipp)
             print(html)

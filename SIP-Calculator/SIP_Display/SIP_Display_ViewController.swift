@@ -10,7 +10,8 @@ import MessageUI
 import Foundation
 import AVFoundation
 import StoreKit
-class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessageComposeViewControllerDelegate, UITextFieldDelegate{
+import UserNotifications
+class SIP_Display_ViewController: UIViewController, ChartViewDelegate, UITextFieldDelegate{
     var pie_chart = PieChartView()
     
     @IBOutlet weak var Monthly_Amount: UITextField!
@@ -50,7 +51,7 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
     static func getCurrentDate() -> String {
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = "dd/MM/yyyy - hh:mm a"
         return dateFormatter.string(from: Date())
     }
     
@@ -90,10 +91,10 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
         
         if textField == Monthly_Amount{
             maxLength = 10
-        } else if textField == Rate_Of_Return{
-            maxLength = 2
-        } else if textField == Tenure{
-            maxLength = 2
+//        } else if textField == Rate_Of_Return{
+//            maxLength = 2
+//        } else if textField == Tenure{
+//            maxLength = 2
         }
         
         let currentString: NSString = textField.text! as NSString
@@ -146,9 +147,18 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
                 Details_button.isHidden = true
                 Main_View_Color.backgroundColor = .white
             }
+            else if Year > 90 {
+                let all = UIAlertController(title: "SIP", message:"Please enter Tenure below 90%.", preferredStyle: .alert)
+                all.addAction(UIAlertAction(title: "OK", style: .cancel , handler: nil))
+                present(all,animated: true,completion: {return})
+                value_Graph_View.isHidden = true
+                Description_view.isHidden = true
+                Scroll_view.isScrollEnabled = false
+                Details_button.isHidden = true
+                Main_View_Color.backgroundColor = .white
+            }
             else
             {
-                
                 
                 rate  = (RateOfReturn/1200)
                 // calculation
@@ -238,10 +248,12 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
     
     func playNotificationSound()
     {
-        let url = Bundle.main.url(forResource: "notificationSound", withExtension: "mp3")
+        let url = Bundle.main.url(forResource: "notificationSound", withExtension: "caf")
         player = try! AVAudioPlayer(contentsOf: url!)
         player!.play()
         player!.volume = 0.8
+       
+        
     }
     @IBAction func clear(_ sender: Any) {
         value_Graph_View.isHidden = true
@@ -277,33 +289,33 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, MFMessage
         
     }
     
-    
-    @IBAction func Send_Message(_ sender: Any) {
-        guard MFMessageComposeViewController.canSendText() else{
-            print("Device is not capable to send message")
-            return
-        }
-        let composer = MFMessageComposeViewController()
-        composer.messageComposeDelegate = self
-        composer.recipients = ["12345678"]
-        composer.subject = "hello Composer"
-        present(composer,animated: true)
-        
-    }
-    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-        
-        switch result {
-        case .cancelled:
-            print("Cancel")
-        case .failed:
-            print("failed")
-        case .sent:
-            print("sent")
-        default:
-            print("Unknown")
-        }
-        controller.dismiss(animated: true)
-    }
+//
+//    @IBAction func Send_Message(_ sender: Any) {
+//        guard MFMessageComposeViewController.canSendText() else{
+//            print("Device is not capable to send message")
+//            return
+//        }
+//        let composer = MFMessageComposeViewController()
+//        composer.messageComposeDelegate = self
+//        composer.recipients = ["12345678"]
+//        composer.subject = "hello Composer"
+//        present(composer,animated: true)
+//
+//    }
+//    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+//
+//        switch result {
+//        case .cancelled:
+//            print("Cancel")
+//        case .failed:
+//            print("failed")
+//        case .sent:
+//            print("sent")
+//        default:
+//            print("Unknown")
+//        }
+//        controller.dismiss(animated: true)
+//    }
     
     
     @IBAction func Share(_ sender: Any) {

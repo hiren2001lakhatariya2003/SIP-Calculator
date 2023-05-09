@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3FD152AC284F60858A84F7B5 /* Pods_SIP_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 705592C5D213D23D7BA7B6AD /* Pods_SIP_Calculator.framework */; };
 		76065C9F7BA9A8A5EBC63EF3 /* Pods_SIP_Calculator_SIP_CalculatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFD20C2F4AF3DA5B5EE8C98 /* Pods_SIP_Calculator_SIP_CalculatorUITests.framework */; };
+		9A1232792A0211DF00A1BED6 /* notificationSound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 9A1232782A0211DF00A1BED6 /* notificationSound.caf */; };
 		9A18AB8A29F2B4F000EF5D36 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A18AB8829F2B4F000EF5D36 /* GlobalData.swift */; };
 		9A1AE1CA29F269B80041B50D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1C929F269B80041B50D /* AppDelegate.swift */; };
 		9A1AE1CC29F269B80041B50D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1CB29F269B80041B50D /* SceneDelegate.swift */; };
@@ -17,7 +18,6 @@
 		9A1AE1E129F269B90041B50D /* SIP_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1E029F269B90041B50D /* SIP_CalculatorTests.swift */; };
 		9A1AE1EB29F269B90041B50D /* SIP_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1EA29F269B90041B50D /* SIP_CalculatorUITests.swift */; };
 		9A1AE1ED29F269B90041B50D /* SIP_CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1AE1EC29F269B90041B50D /* SIP_CalculatorUITestsLaunchTests.swift */; };
-		9A3101E029FCD63A000618F2 /* HttpWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3101DF29FCD63A000618F2 /* HttpWrapper.swift */; };
 		9A570F7C29F26B0700019448 /* SIP_PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F7A29F26B0700019448 /* SIP_PlannerViewController.swift */; };
 		9A570F7D29F26B0700019448 /* SIP_PlannerDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F7B29F26B0700019448 /* SIP_PlannerDAL.swift */; };
 		9A570F8129F26B2800019448 /* Lumpsum_DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570F7F29F26B2800019448 /* Lumpsum_DisplayViewController.swift */; };
@@ -43,7 +43,6 @@
 		9A570FBC29F26D1500019448 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FB429F26D1400019448 /* FMResultSet.m */; };
 		9A570FBD29F26D1500019448 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FB529F26D1400019448 /* FMDatabase.m */; };
 		9A570FBE29F26D1500019448 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FB729F26D1400019448 /* FMDatabasePool.m */; };
-		9A570FC129F26D3D00019448 /* notificationSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9A570FBF29F26D3D00019448 /* notificationSound.mp3 */; };
 		9A570FC229F26D3D00019448 /* trash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9A570FC029F26D3D00019448 /* trash.mp3 */; };
 		9A570FC529F26D4E00019448 /* output-onlinegiftools.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A570FC329F26D4D00019448 /* output-onlinegiftools.gif */; };
 		9A570FC629F26D4E00019448 /* trash-1991_512.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A570FC429F26D4E00019448 /* trash-1991_512.gif */; };
@@ -55,6 +54,7 @@
 		9A570FD629F2706B00019448 /* Setting_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FD429F2706B00019448 /* Setting_TableViewCell.swift */; };
 		9A570FD729F2706B00019448 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A570FD529F2706B00019448 /* SettingViewController.swift */; };
 		9A570FD929F271E200019448 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A570FD829F271E200019448 /* Main.storyboard */; };
+		9A596DC02A00C23100DA9F1C /* HttpWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A596DBF2A00C23100DA9F1C /* HttpWrapper.swift */; };
 		9A76239729F2B32700D25D93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A76239629F2B32700D25D93 /* LaunchScreen.storyboard */; };
 		9A92D10229F3DDF1008271AA /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A92D10129F3DDF1008271AA /* FeedBackViewController.swift */; };
 		CF9A0312BF5E894322E6259E /* Pods_SIP_CalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B2019066017FD6C58085E8 /* Pods_SIP_CalculatorTests.framework */; };
@@ -84,6 +84,7 @@
 		705592C5D213D23D7BA7B6AD /* Pods_SIP_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIP_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7462858EAFBFB5CF5101722D /* Pods-SIP-Calculator-SIP-CalculatorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIP-Calculator-SIP-CalculatorUITests.release.xcconfig"; path = "Target Support Files/Pods-SIP-Calculator-SIP-CalculatorUITests/Pods-SIP-Calculator-SIP-CalculatorUITests.release.xcconfig"; sourceTree = "<group>"; };
 		850C8E9D3C14371691301EBC /* Pods-SIP-Calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIP-Calculator.debug.xcconfig"; path = "Target Support Files/Pods-SIP-Calculator/Pods-SIP-Calculator.debug.xcconfig"; sourceTree = "<group>"; };
+		9A1232782A0211DF00A1BED6 /* notificationSound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = notificationSound.caf; sourceTree = "<group>"; };
 		9A18AB8829F2B4F000EF5D36 /* GlobalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
 		9A1AE1C629F269B80041B50D /* SIP-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SIP-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A1AE1C929F269B80041B50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +97,6 @@
 		9A1AE1E629F269B90041B50D /* SIP-CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SIP-CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A1AE1EA29F269B90041B50D /* SIP_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIP_CalculatorUITests.swift; sourceTree = "<group>"; };
 		9A1AE1EC29F269B90041B50D /* SIP_CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIP_CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		9A3101DF29FCD63A000618F2 /* HttpWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpWrapper.swift; path = ../../../../Downloads/HttpWrapper.swift; sourceTree = "<group>"; };
 		9A570F7A29F26B0700019448 /* SIP_PlannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIP_PlannerViewController.swift; sourceTree = "<group>"; };
 		9A570F7B29F26B0700019448 /* SIP_PlannerDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIP_PlannerDAL.swift; sourceTree = "<group>"; };
 		9A570F7F29F26B2800019448 /* Lumpsum_DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lumpsum_DisplayViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +129,6 @@
 		9A570FB729F26D1400019448 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
 		9A570FB829F26D1500019448 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		9A570FB929F26D1500019448 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		9A570FBF29F26D3D00019448 /* notificationSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = notificationSound.mp3; sourceTree = "<group>"; };
 		9A570FC029F26D3D00019448 /* trash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = trash.mp3; sourceTree = "<group>"; };
 		9A570FC329F26D4D00019448 /* output-onlinegiftools.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "output-onlinegiftools.gif"; sourceTree = "<group>"; };
 		9A570FC429F26D4E00019448 /* trash-1991_512.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "trash-1991_512.gif"; sourceTree = "<group>"; };
@@ -141,6 +140,7 @@
 		9A570FD429F2706B00019448 /* Setting_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting_TableViewCell.swift; sourceTree = "<group>"; };
 		9A570FD529F2706B00019448 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9A570FD829F271E200019448 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9A596DBF2A00C23100DA9F1C /* HttpWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpWrapper.swift; sourceTree = "<group>"; };
 		9A76239629F2B32700D25D93 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A92D10129F3DDF1008271AA /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedBackViewController.swift; sourceTree = "<group>"; };
 		B4490F7C2AF3E87B25C54730 /* Pods-SIP-CalculatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIP-CalculatorTests.debug.xcconfig"; path = "Target Support Files/Pods-SIP-CalculatorTests/Pods-SIP-CalculatorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				9A18AB8829F2B4F000EF5D36 /* GlobalData.swift */,
-				9A3101DF29FCD63A000618F2 /* HttpWrapper.swift */,
+				9A596DBF2A00C23100DA9F1C /* HttpWrapper.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -365,7 +365,7 @@
 		9A570F9E29F26C5E00019448 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				9A570FBF29F26D3D00019448 /* notificationSound.mp3 */,
+				9A1232782A0211DF00A1BED6 /* notificationSound.caf */,
 				9A570FC029F26D3D00019448 /* trash.mp3 */,
 			);
 			path = Sound;
@@ -533,9 +533,9 @@
 				9A570FC629F26D4E00019448 /* trash-1991_512.gif in Resources */,
 				9A1AE1D329F269B80041B50D /* Assets.xcassets in Resources */,
 				9A570FC529F26D4E00019448 /* output-onlinegiftools.gif in Resources */,
+				9A1232792A0211DF00A1BED6 /* notificationSound.caf in Resources */,
 				9A570FC229F26D3D00019448 /* trash.mp3 in Resources */,
 				9A570FCE29F26E6100019448 /* SIP.db in Resources */,
-				9A570FC129F26D3D00019448 /* notificationSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,7 +693,7 @@
 				9A570F8D29F26BA000019448 /* SIP_DisplayDAL.swift in Sources */,
 				9A570F7D29F26B0700019448 /* SIP_PlannerDAL.swift in Sources */,
 				9A18AB8A29F2B4F000EF5D36 /* GlobalData.swift in Sources */,
-				9A3101E029FCD63A000618F2 /* HttpWrapper.swift in Sources */,
+				9A596DC02A00C23100DA9F1C /* HttpWrapper.swift in Sources */,
 				9A570FD129F2702600019448 /* GIF.swift in Sources */,
 				9A570FCC29F26E5300019448 /* Utility.swift in Sources */,
 				9A1AE1CC29F269B80041B50D /* SceneDelegate.swift in Sources */,
@@ -865,8 +865,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -898,8 +898,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -943,6 +943,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2BSGF4F3MA;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -980,6 +981,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2BSGF4F3MA;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "SIP.SIP-CalculatorUITests";

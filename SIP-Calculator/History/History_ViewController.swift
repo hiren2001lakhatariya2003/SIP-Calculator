@@ -15,13 +15,16 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
     var history : [History] = []
     var tools : [Tools] = []
     var stringFormate : String = String()
-    
+    var tableviewcell = History_TableViewCell()
     let heightforcell = 50
+    @IBOutlet weak var delete_all_btn: UIBarButtonItem!
     
     @IBOutlet weak var history_Table: UITableView!
     @IBOutlet weak var Display_Empty_trash: UIView!
     @IBOutlet weak var GIF: UIImageView!
     @IBOutlet var Main_View_Colour: UIView!
+    
+    
     
     func change(num: Double) -> String
     {
@@ -68,6 +71,8 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
         super.viewDidLoad()
         
         self.Main_View_Colour.backgroundColor = UIColor(red: (216/255), green: (247/255), blue: (255/255), alpha: 1)
+        
+       
     }
     
     func loadGIF()
@@ -84,12 +89,23 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
             Display_Empty_trash.isHidden = true
             history_Table.isHidden = false
             GIF.stopAnimating()
+            if #available(iOS 16.0, *) {
+                self.delete_all_btn.isHidden = false
+            } else {
+                // Fallback on earlier versions
+            }
+            
         }
         else
         {
             Display_Empty_trash.isHidden = false
             history_Table.isHidden = true
             loadGIF()
+            if #available(iOS 16.0, *) {
+                self.delete_all_btn.isHidden = true
+            } else {
+                // Fallback on earlier versions
+            }
         }
     }
     
@@ -115,10 +131,6 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "History" , for: indexPath) as! History_TableViewCell;
         
-        cell.Display_History_view.layer.cornerRadius = 20
-        cell.Lumpsum_View.layer.cornerRadius = 20
-        cell.SWP_View.layer.cornerRadius = 20
-        cell.SIPP_View.layer.cornerRadius = 20
         cell.Lumpsum_View.layer.masksToBounds = false
         cell.Lumpsum_View.layer.shadowOffset = CGSize(width: 0, height: 0)
         cell.Lumpsum_View.layer.shadowRadius = 3
@@ -152,6 +164,8 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell.SIP_Date.text = h.SIP_Date
             cell.delete.tag = indexPath.row
             cell.delete.addTarget(self, action: #selector(Delete_Individual(sender:)), for: .touchUpInside)
+//            cell.delete_SIP_multiple.addTarget(self, action: #selector(Delete_multiple(sender:)), for: .touchUpInside)
+//    
         }
         else if(h.toolId == 3)
         {
@@ -179,6 +193,7 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
             cell.SWP_Delete.tag = indexPath.row
             cell.SWP_Delete.addTarget(self, action: #selector(Delete_Individual(sender:)), for: .touchUpInside)
             
+            
         }
         else if(h.toolId == 4)
         {
@@ -199,8 +214,9 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     
     
+    
     @IBAction func Delete_All(_ sender: Any) {
-        let alert = UIAlertController(title: "Clear \"History\"?", message:"clear all the history.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Clear \"History\"?", message:"Clear all the history.", preferredStyle: .alert)
         
         let Cancle = UIAlertAction(title: "Cancle" , style: .default) { (_ action) in
             //code here…
@@ -217,12 +233,19 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 self.history_Table.isHidden = true
                 self.loadHistory()
                 self.loadGIF()
+                if #available(iOS 16.0, *) {
+                    self.delete_all_btn.isHidden = true
+                } else {
+                    // Fallback on earlier versions
+                }
+                
                 self.Main_View_Colour.backgroundColor = UIColor(red: (216/255), green: (247/255), blue: (255/255), alpha: 1)
                 
             }
         }
         Delete.setValue(UIColor.red, forKey: "titleTextColor")
         alert.addAction(Delete)
+        
         
     }
     
@@ -236,13 +259,18 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
             //code here…
         }
         let Delete = UIAlertAction(title: "Delete" , style: .default) { (_ action) in
+           
             let status = HistoryDAL.delete_Cal(h: h)
-            
             if status
             {
                 self.loadHistory()
                 if (self.history.count <= 0)
                 {
+                    if #available(iOS 16.0, *) {
+                        self.delete_all_btn.isHidden = true
+                    } else {
+                        // Fallback on earlier versions
+                    }
                     self.Display_Empty_trash.isHidden = false
                     self.loadGIF()
                     self.history_Table.isHidden = true
@@ -250,6 +278,11 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 }
                 else
                 {
+                    if #available(iOS 16.0, *) {
+                        self.delete_all_btn.isHidden = false
+                    } else {
+                        // Fallback on earlier versions
+                    }
                     self.Display_Empty_trash.isHidden = true
                     self.history_Table.isHidden = false
                 }
@@ -263,6 +296,9 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
         
     }
+    
+    @objc func Delete_multiple(sender: UIButton) {}
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let h : History = history[indexPath.row];
@@ -321,7 +357,7 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
             dvc.ExpectedReturn = h.SIPP_EstimatedReturn
             dvc.TotalInvestAmount = h.SIPP_InvestedAmount
             dvc.fromScreen = "SIP_Planner"
-            
+            dvc.inflaction = h.SIPP_Inflaction
             self.navigationController?.pushViewController(dvc, animated: true)
         }
     }

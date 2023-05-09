@@ -66,7 +66,7 @@ class SIP_PlannerViewController: UIViewController, ChartViewDelegate , UITextFie
         
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.dateFormat = "dd/MM/yyyy - hh:mm a"
         
         return dateFormatter.string(from: Date())
         
@@ -267,7 +267,7 @@ class SIP_PlannerViewController: UIViewController, ChartViewDelegate , UITextFie
     }
     func playNotificationSound()
     {
-        let url = Bundle.main.url(forResource: "notificationSound", withExtension: "mp3")
+        let url = Bundle.main.url(forResource: "notificationSound", withExtension: "caf")
         player = try! AVAudioPlayer(contentsOf: url!)
         player!.play()
         player!.volume = 0.8
@@ -298,14 +298,13 @@ class SIP_PlannerViewController: UIViewController, ChartViewDelegate , UITextFie
         Rate_Of_Return.resignFirstResponder()
         Tenure.resignFirstResponder()
         let dvc : Details_ViewController = storyboard?.instantiateViewController(withIdentifier: "Details_ViewController") as! Details_ViewController
-        
         dvc.ExpectedAmount = ExpectedAmount
         dvc.RateOfReturn = RateOFReturn
         dvc.Tenure = Year
         dvc.MonthlyAmount = FinalMonthlyAmount
         dvc.ExpectedReturn = FinalEstimatedReturn
         dvc.TotalInvestAmount = FinalInvestedAmount
-        
+        dvc.inflaction = inflaction
         dvc.fromScreen = "SIP_Planner"
         
         self.navigationController?.pushViewController(dvc, animated: true)
@@ -313,10 +312,19 @@ class SIP_PlannerViewController: UIViewController, ChartViewDelegate , UITextFie
     }
     
     @IBAction func Share(_ sender: Any) {
-        
-        let share = UIActivityViewController(activityItems: ["----- SIP Planner Details -----\nExpected Amount : \(change(num: ExpectedAmount))\nRate Of Return : \(RateOFReturn) %\nTenure(Year) : \(change(num: Year)) Years\nMonthly Amount : \(change(num: FinalMonthlyAmount))\nEstimated Retun : \(change(num: FinalEstimatedReturn))\nInvested Amount : \(change(num: FinalInvestedAmount))"], applicationActivities: nil)
-        share.popoverPresentationController?.sourceView = self.view
-        self.present(share, animated: true,completion: nil)
+        if(inflaction == 0.0)
+        {
+            let share = UIActivityViewController(activityItems: ["----- SIP Planner Details -----\nExpected Amount : \(change(num: ExpectedAmount))\nRate Of Return : \(RateOFReturn) %\nTenure(Year) : \(change(num: Year)) Years\nMonthly Amount : \(change(num: FinalMonthlyAmount))\nEstimated Retun : \(change(num: FinalEstimatedReturn))\nInvested Amount : \(change(num: FinalInvestedAmount))"], applicationActivities: nil)
+            share.popoverPresentationController?.sourceView = self.view
+            self.present(share, animated: true,completion: nil)
+        }
+        else
+        {
+            let share = UIActivityViewController(activityItems: ["----- SIP Planner Details -----\nExpected Amount : \(change(num: ExpectedAmount))\nInflation : \(inflaction) %\nRate Of Return : \(RateOFReturn) %\nTenure(Year) : \(change(num: Year)) Years\nMonthly Amount : \(change(num: FinalMonthlyAmount))\nEstimated Retun : \(change(num: FinalEstimatedReturn))\nInvested Amount : \(change(num: FinalInvestedAmount))"], applicationActivities: nil)
+            share.popoverPresentationController?.sourceView = self.view
+            self.present(share, animated: true,completion: nil)
+        }
+       
     }
     
     @IBAction func Historys(_ sender: UIBarButtonItem) {
