@@ -3112,13 +3112,6 @@ A SIP planner calculator makes it easy for investors to plan their investments a
                                                 <constraint firstItem="DVe-ie-KyY" firstAttribute="centerX" secondItem="MtW-I6-w17" secondAttribute="centerX" id="hJ6-VP-ZTO"/>
                                                 <constraint firstItem="X0l-Th-hLl" firstAttribute="centerY" secondItem="MtW-I6-w17" secondAttribute="centerY" id="x5d-Qm-BwP"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="qKu-1A-3LD"/>
-                                                    <exclude reference="DVe-ie-KyY"/>
-                                                    <exclude reference="X0l-Th-hLl"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
@@ -3212,11 +3205,6 @@ A SIP planner calculator makes it easy for investors to plan their investments a
                             <constraint firstItem="eDQ-zm-E0x" firstAttribute="top" secondItem="ubP-ZH-wl6" secondAttribute="top" id="dwE-DV-2hH"/>
                             <constraint firstAttribute="bottom" secondItem="eDQ-zm-E0x" secondAttribute="bottom" id="pt1-xI-Uhs"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="uu2-2w-NCr"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="History" id="zuh-t2-RsM">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="trash" catalog="system" id="iDI-L1-oOH">

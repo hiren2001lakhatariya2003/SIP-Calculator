@@ -216,36 +216,45 @@ class History_ViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     
     @IBAction func Delete_All(_ sender: Any) {
-        let alert = UIAlertController(title: "Clear \"History\"?", message:"Clear all the history.", preferredStyle: .alert)
         
-        let Cancle = UIAlertAction(title: "Cancle" , style: .default) { (_ action) in
-            //code here…
-        }
-        alert.addAction(Cancle)
-        self.present(alert, animated: true, completion: nil)
-        
-        let Delete = UIAlertAction(title: "Clear" , style: .default) { (_ action) in
-            let status = HistoryDAL.delete_all()
-            if status
-            {
-                self.loadHistory()
-                self.Display_Empty_trash.isHidden = false
-                self.history_Table.isHidden = true
-                self.loadHistory()
-                self.loadGIF()
-                if #available(iOS 16.0, *) {
-                    self.delete_all_btn.isHidden = true
-                } else {
-                    // Fallback on earlier versions
-                }
-                
-                self.Main_View_Colour.backgroundColor = UIColor(red: (216/255), green: (247/255), blue: (255/255), alpha: 1)
-                
+        let mainAlert = UIAlertController(title: "Delete History", message: "Select Deleting Option", preferredStyle: .actionSheet)
+        mainAlert.addAction(UIAlertAction(title: "Delete All", style: .default, handler: { (_ action) in
+            let alert = UIAlertController(title: "Clear \"History\"?", message:"Clear all the history.", preferredStyle: .alert)
+            
+            let Cancle = UIAlertAction(title: "Cancel" , style: .default) { (_ action) in
+                //code here…
             }
-        }
-        Delete.setValue(UIColor.red, forKey: "titleTextColor")
-        alert.addAction(Delete)
-        
+            alert.addAction(Cancle)
+            self.present(alert, animated: true, completion: nil)
+            
+            let Delete = UIAlertAction(title: "Clear" , style: .default) { (_ action) in
+                let status = HistoryDAL.delete_all()
+                if status
+                {
+                    self.loadHistory()
+                    self.Display_Empty_trash.isHidden = false
+                    self.history_Table.isHidden = true
+                    self.loadHistory()
+                    self.loadGIF()
+                    if #available(iOS 16.0, *) {
+                        self.delete_all_btn.isHidden = true
+                    } else {
+                        // Fallback on earlier versions
+                    }
+                    
+                    self.Main_View_Colour.backgroundColor = UIColor(red: (216/255), green: (247/255), blue: (255/255), alpha: 1)
+                    
+                }
+            }
+            Delete.setValue(UIColor.red, forKey: "titleTextColor")
+            alert.addAction(Delete)
+            
+        }))
+        mainAlert.addAction(UIAlertAction(title: "Delete Individual", style: .default, handler: { (_ action) in
+            self.history_Table.allowsSelectionDuringEditing = true
+        }))
+        mainAlert.addAction(UIAlertAction(title: "Cencel", style: .cancel))
+        self.present(mainAlert, animated: true)
         
     }
     
