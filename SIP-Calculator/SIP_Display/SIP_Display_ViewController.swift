@@ -89,14 +89,7 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, UITextFie
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        if textField == Monthly_Amount{
-            maxLength = 10
-//        } else if textField == Rate_Of_Return{
-//            maxLength = 2
-//        } else if textField == Tenure{
-//            maxLength = 2
-        }
-        
+       
         let currentString: NSString = textField.text! as NSString
         
         let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString

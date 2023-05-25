@@ -89,16 +89,7 @@ class SWP_DisplayViewController: UIViewController,ChartViewDelegate, UITextField
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        if textField == Total_Invested_Amount{
-            maxLength = 10
-        } else if textField == Rate_Of_Return{
-            maxLength = 2
-        } else if textField == Tenure{
-            maxLength = 2
-        } else if textField == Withdrawal_Amount
-        {
-            maxLength = 10
-        }
+       
         
         let currentString: NSString = textField.text! as NSString
         

@@ -27,6 +27,7 @@ class ToolsDAL: NSObject {
                     t.ToolName = resultSet.string(forColumn: "ToolName")!
                     t.ToolImage = resultSet.string(forColumn: "ToolName")! + ".png"
                     tools.append(t)
+                    
                 }
             }
             catch
