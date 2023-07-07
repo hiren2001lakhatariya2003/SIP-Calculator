@@ -87,14 +87,14 @@ class SIP_Display_ViewController: UIViewController, ChartViewDelegate, UITextFie
     
 
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-       
-        let currentString: NSString = textField.text! as NSString
-        
-        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
-        return newString.length <= maxLength
-    }
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        
+//       
+//        let currentString: NSString = textField.text! as NSString
+//        
+//        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
+//        return newString.length <= maxLength
+//    }
     func change(num: Double) -> String
     {
         let formatter = NumberFormatter()              // Cache this, NumberFormatter creation is expensive.

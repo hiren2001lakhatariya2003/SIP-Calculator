@@ -87,15 +87,15 @@ class SWP_DisplayViewController: UIViewController,ChartViewDelegate, UITextField
             self.notification.alpha = 0
         }, completion: nil)
     }
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-       
-        
-        let currentString: NSString = textField.text! as NSString
-        
-        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
-        return newString.length <= maxLength
-    }
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//
+//
+//
+//        let currentString: NSString = textField.text! as NSString
+//
+//        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
+//        return newString.length <= maxLength
+//    }e
     
     @IBAction func Calculate_SWP(_ sender: UIButton) {
         

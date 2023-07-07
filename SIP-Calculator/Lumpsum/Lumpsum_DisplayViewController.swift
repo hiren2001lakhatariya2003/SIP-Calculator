@@ -79,21 +79,21 @@ class Lumpsum_DisplayViewController: UIViewController, ChartViewDelegate , UITex
             self.notification.alpha = 0
         }, completion: nil)
     }
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        if textField == Total_Investment{
-            maxLength = 10
-        } else if textField == Rate_Of_Return{
-            maxLength = 2
-        } else if textField == Tenure{
-            maxLength = 2
-        }
-        
-        let currentString: NSString = textField.text! as NSString
-        
-        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
-        return newString.length <= maxLength
-    }
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//
+//        if textField == Total_Investment{
+//            maxLength = 10
+//        } else if textField == Rate_Of_Return{
+//            maxLength = 2
+//        } else if textField == Tenure{
+//            maxLength = 2
+//        }
+//
+//        let currentString: NSString = textField.text! as NSString
+//
+//        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
+//        return newString.length <= maxLength
+//    }
     
     @IBAction func Calculate(_ sender: UIButton) {
         if(Total_Investment.text == "" || Rate_Of_Return.text == "" || Tenure.text == "")

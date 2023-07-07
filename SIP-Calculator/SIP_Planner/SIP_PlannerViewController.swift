@@ -95,21 +95,21 @@ class SIP_PlannerViewController: UIViewController, ChartViewDelegate , UITextFie
         
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        if textField == Expected_Amount{
-            maxLength = 10
-        } else if textField == Rate_Of_Return{
-            maxLength = 2
-        } else if textField == Tenure{
-            maxLength = 2
-        }
-        
-        let currentString: NSString = textField.text! as NSString
-        
-        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
-        return newString.length <= maxLength
-    }
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        
+//        if textField == Expected_Amount{
+//            maxLength = 10
+//        } else if textField == Rate_Of_Return{
+//            maxLength = 2
+//        } else if textField == Tenure{
+//            maxLength = 2
+//        }
+//        
+//        let currentString: NSString = textField.text! as NSString
+//        
+//        let newString: NSString =  currentString.replacingCharacters(in: range, with: string) as NSString
+//        return newString.length <= maxLength
+//    }
     
     @IBAction func inflaction_btn(_ sender: Any) {
         if inflaction_Switch.isOn
